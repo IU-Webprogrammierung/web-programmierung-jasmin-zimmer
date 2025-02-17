@@ -3,133 +3,172 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Werdegang</title>
+    <title>Mein Werdegang</title>
   </head>
   <body>
     <header>
       <nav>
-          <div class="logg">
-              <img />
-          </div>
-          <ul>
-              <li><a href="/index.html">Startseite</a></li>
-              <li><a href="/über-mich.html">Über mich</a></li>
-              <li><a href="/werdegang.html">Werdegang</a></li>
-              <li><a href="/buchfavoriten.html">Buchfavoriten</a></li>
-          </ul>
-          <div class="toggle-buttom"></div>
+        <div class="logo">
+          <img />
+        </div>
+        <ul>
+          <li><a href="/index.html">Startseite</a></li>
+          <li><a href="/über-mich.html">Über mich</a></li>
+          <li><a href="/werdegang.html">Werdegang</a></li>
+          <li><a href="/buchfavoriten.html">Buchfavoriten</a></li>
+        </ul>
+        <!--Toggle Button (Light & Dark Theme)-->
+        <label class="toggle-button">
+          <input type="checkbox" />
+          <span class="slider round"></span>
+        </label>
       </nav>
 
-      <h1 class="serif">
-      <button aria-label="Hier geht es zu weiteren Inhalten auf der Seite">df
-        <img />
+      <h1 class="serif">Mein Werdegang</h1>
+      <button aria-label="Hier geht es zu weiteren Inhalten auf der Seite">
+        <img src="/images/arrow-down-lightm.png" />
       </button>
-  </header>
+    </header>
 
-  <main>
-    <section class="education">
-      <h2>meine <i>Bildungsweg</i></h2>
-      <div class="grid">
-        <div>
-          <h3>01</h3>
-          <p class="bold">Realschulabschluss</p>
-          <p>Johannes-Kepler-Realschule</p>
-          <p>Zweig: Wirtschaft</p>
-          <!--Jahreszahl nachschauen-->
-          <p class="small">2022-2022</p>
-        </div>
-        <div>
-          <h3>02</h3>
-          <p class="bold">Fachabitur</p>
-          <p>Fachoberschule Bayreuth</p>
-          <p>Bildungsrichtung: Wirtschaft</p>
-          <p class="small">2020-2022</p>
-        </div>
-        <div>
-          <h3>03</h3>
-          <p class="bold">Bachelor of Science</p>
-          <p>IU Internationale Hochschule</p>
-          <p>Fernstudoum Informatik</p>
-          <p class="small">2022-2025</p>
-        </div>
-
-      </div>
-    </section>
-
-    <section class="skills">
-      <h2>Skills</h2>
-      
-      <div class="skill">
-        <h4>HTML & CSS</h4>
-        <p>Ich habe ein sehr gutes Verständnis von HTML und CSS und kann strukturierte, benutzerfreundliche Webseiten erstellen. Zusätzlich beherrsche ich Layout-Techniken wie Flexbox und Grid, um sicherzustellen, dass meine Seiten auf allen Geräten gut aussehen</p>
-      </div>
-      <div class="skill">
-        <h4>Javascript</h4>
-        <p>Ich habe ein gutes Verständnis von JavaScript und kann interaktive Elemente in Webseiten integrieren. Ich bin mit den grundlegenden Konzepten vertraut und arbeite daran, meine Fähigkeiten in der Programmierung komplexerer Funktionen und Anwendungen weiter auszubauen.</p>
-      </div>
-      <div class="skill">
-        <h4>React</h4>
-        <p>Ich habe ein sehr gutes Verständnis von React und kann komplexe, interaktive Benutzeroberflächen entwickeln. Ich bin vertraut mit der Erstellung von Komponenten, dem State-Management und der Verwendung von Hooks, um effiziente und wartbare Anwendungen zu erstellen.</p>
-      </div>
-      <div class="skill">
-        <h4>Java</h4>
-        <p>Meine Kenntnisse in Java sind grundlegend. Ich habe ein gutes Verständnis der objektorientierten Programmierung und arbeite daran, meine Fähigkeiten in dieser Sprache weiterzuentwickeln.</p>
-      </div>
-    </section>
-
-    <section class="projects">
-      <h2>Meine <i>Projekte</i></h2>
-      <div class="project">
-        <img src="" alt="">
-        <div class="project_info">
-          <h3>Transparenz für den Klimawandel: CO₂-Emissionsdaten für eine nachhaltige Zukunft</h3>
-          <p>Ziel der Website ist es, eine benutzerfreundlihc Plattform zu schaffen, die transparent Information über die jährlichen CO₂-Emissionen von Unternehmen und Ländern bereitstellt. </p>
-          <div class="technology">
-            <p>HTML</p>
-            <p>React</p>
-            <p>SASS</p>
+    <main>
+      <section class="education">
+        <h2>meine <i>Bildungsweg</i></h2>
+        <div class="grid">
+          <div>
+            <h3>01</h3>
+            <p class="bold">Realschulabschluss</p>
+            <p>Johannes-Kepler-Realschule</p>
+            <p>Zweig: Wirtschaft</p>
+            <p class="small">2014-2020</p>
           </div>
-          <a href="https://github.com/zrjasmin/co2-emissionen">zum Github Projekt</a>
-        </div>
-      </div>
-      <div class="project">
-        <img src="" alt="">
-        <div class="project_info">
-          <h3>Require4Testing: Web-App zur Organisation manueller Anwendertests</h3>
-          <p>Die Web-App „Require4Testing“ wird entwickelt, um den Prozess der manuellen Anwendertests zu optimieren. Sie ermöglicht Testverantwortlichen die einfache Planung, Erstellung und Durchführung von Tests. Die Anwendung bietet Funktionen wie das Erstellen von Testplänen, das Zuweisen von Testern und das Verfolgen von Testergebnissen. </p>
-          <div class="technologies">
-            <p>Java</p>
-            <p>JSF</p>
-            <p>MySQL</p>
+          <div>
+            <h3>02</h3>
+            <p class="bold">Fachabitur</p>
+            <p>Fachoberschule Bayreuth</p>
+            <p>Bildungsrichtung: Wirtschaft</p>
+            <p class="small">2020-2022</p>
           </div>
-          <a href="https://github.com/zrjasmin/WebappTesting/tree/main/Webapp">zum Github Projekt</a>
-
+          <div>
+            <h3>03</h3>
+            <p class="bold">Bachelor of Science</p>
+            <p>IU Internationale Hochschule</p>
+            <p>Fernstudoum Informatik</p>
+            <p class="small">2022-2025</p>
+          </div>
         </div>
-      </div>
-    </section>
-  </main>
+      </section>
 
-  <footer>
-    <ul>
-      <li><a href="#">Startseite</a></li>
-      <li><a href="#">Über mich</a></li>
-      <li><a href="#">Werdegang</a></li>
-      <li><a href="#">Buchfavoriten</a></li>
+      <section class="skills">
+        <h2>Skills</h2>
 
-      <li>
-        <img src="/images/icon-email-lightm.png" alt="Meine E-mailadresse" />
-        <p>zimmer.jasmin04@gmail.com</p>
-      </li>
-      <li>
-        <img src="/images/icon-phone-lightm.png" alt="Meine Telefonnummer" />
-        <p>+49 174 9889437</p>
-      </li>
-      <li>
-        <img src="/images/icon-github-lightm.png" alt="Mein Github-Konto" />
-        <a href="https://github.com/zrjasmin">zrjasmin</a>
-      </li>
-    </ul>
-  </footer>
+        <div class="skill">
+          <h4>HTML & CSS</h4>
+          <p>
+            Ich habe ein sehr gutes Verständnis von HTML und CSS und kann
+            strukturierte, benutzerfreundliche Webseiten erstellen. Zusätzlich
+            beherrsche ich Layout-Techniken wie Flexbox und Grid, um
+            sicherzustellen, dass meine Seiten auf allen Geräten gut aussehen
+          </p>
+        </div>
+        <div class="skill">
+          <h4>Javascript</h4>
+          <p>
+            Ich habe ein gutes Verständnis von JavaScript und kann interaktive
+            Elemente in Webseiten integrieren. Ich bin mit den grundlegenden
+            Konzepten vertraut und arbeite daran, meine Fähigkeiten in der
+            Programmierung komplexerer Funktionen und Anwendungen weiter
+            auszubauen.
+          </p>
+        </div>
+        <div class="skill">
+          <h4>React</h4>
+          <p>
+            Ich habe ein sehr gutes Verständnis von React und kann komplexe,
+            interaktive Benutzeroberflächen entwickeln. Ich bin vertraut mit der
+            Erstellung von Komponenten, dem State-Management und der Verwendung
+            von Hooks, um effiziente und wartbare Anwendungen zu erstellen.
+          </p>
+        </div>
+        <div class="skill">
+          <h4>Java</h4>
+          <p>
+            Meine Kenntnisse in Java sind grundlegend. Ich habe ein gutes
+            Verständnis der objektorientierten Programmierung und arbeite daran,
+            meine Fähigkeiten in dieser Sprache weiterzuentwickeln.
+          </p>
+        </div>
+      </section>
 
+      <section class="projects">
+        <h2>Meine <i>Projekte</i></h2>
+        <div class="project">
+          <div class="project_info">
+            <h3>
+              Transparenz für den Klimawandel: CO₂-Emissionsdaten für eine
+              nachhaltige Zukunft
+            </h3>
+            <p>
+              Ziel der Website ist es, eine benutzerfreundlihc Plattform zu
+              schaffen, die transparent Information über die jährlichen
+              CO₂-Emissionen von Unternehmen und Ländern bereitstellt.
+            </p>
+            <div class="technology">
+              <p>HTML</p>
+              <p>React</p>
+              <p>SASS</p>
+            </div>
+            <a href="https://github.com/zrjasmin/co2-emissionen"
+              >zum Github Projekt</a
+            >
+          </div>
+        </div>
+        <div class="project">
+          <div class="project_info">
+            <h3>
+              Require4Testing: Web-App zur Organisation manueller Anwendertests
+              (in Bearbeitung)
+            </h3>
+            <p>
+              Die Web-App „Require4Testing“ wird entwickelt, um den Prozess der
+              manuellen Anwendertests zu optimieren. Sie ermöglicht
+              Testverantwortlichen die einfache Planung, Erstellung und
+              Durchführung von Tests. Die Anwendung bietet Funktionen wie das
+              Erstellen von Testplänen, das Zuweisen von Testern und das
+              Verfolgen von Testergebnissen.
+            </p>
+            <div class="technologies">
+              <p>Java</p>
+              <p>JSF</p>
+              <p>MySQL</p>
+            </div>
+            <a href="https://github.com/zrjasmin/WebappTesting/tree/main/Webapp"
+              >zum Github Projekt</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <ul>
+        <li><a href="/index.html">Startseite</a></li>
+        <li><a href="/über-mich.html">Über mich</a></li>
+        <li><a href="/werdegang.html">Werdegang</a></li>
+        <li><a href="/buchfavoriten.html">Buchfavoriten</a></li>
+
+        <li>
+          <img src="/images/icon-email-lightm.png" alt="Meine E-mailadresse" />
+          <p>zimmer.jasmin04@gmail.com</p>
+        </li>
+        <li>
+          <img src="/images/icon-phone-lightm.png" alt="Meine Telefonnummer" />
+          <p>+49 174 9889437</p>
+        </li>
+        <li>
+          <img src="/images/icon-github-lightm.png" alt="Mein Github-Konto" />
+          <a href="https://github.com/zrjasmin">zrjasmin</a>
+        </li>
+      </ul>
+    </footer>
   </body>
 </html>
