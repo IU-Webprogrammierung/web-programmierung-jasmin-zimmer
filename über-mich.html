@@ -7,83 +7,148 @@
   </head>
   <body>
     <header>
-        <nav>
-            <div class="logg">
-                <img />
-            </div>
-            <ul>
-                <li><a href="/index.html">Startseite</a></li>
-                <li><a href="/über-mich.html">Über mich</a></li>
-                <li><a href="/werdegang.html">Werdegang</a></li>
-                <li><a href="/buchfavoriten.html">Buchfavoriten</a></li>
-            </ul>
-            <div class="toggle-buttom"></div>
-        </nav>
-  
-        <h1 class="serif">
-        <button aria-label="Hier geht es zu weiteren Inhalten auf der Seite">df
+      <nav>
+        <div class="logo">
           <img />
-        </button>
+        </div>
+        <ul>
+          <li><a href="/index.html">Startseite</a></li>
+          <li><a href="/über-mich.html">Über mich</a></li>
+          <li><a href="/werdegang.html">Werdegang</a></li>
+          <li><a href="/buchfavoriten.html">Buchfavoriten</a></li>
+        </ul>
+        <!--Toggle Button (Light & Dark Theme)-->
+        <label class="toggle-button">
+          <input type="checkbox" />
+          <span class="slider round"></span>
+        </label>
+      </nav>
+
+      <h1 class="serif">Über mich</h1>
+      <button aria-label="Hier geht es zu weiteren Inhalten auf der Seite">
+        <img src="/images/arrow-down-lightm.png" />
+      </button>
     </header>
 
     <main>
-        <section class="vorstellung">
-            <div class="images-container">
-                <img/>
-                <img/>
-            </div>
-            <div class="text-container">
-                <h2></h2>
-                <p></p>
-            </div>
-        </section>
+      <section class="vorstellung">
+        <div class="images-container">
+          <figure>
+            <img
+              src="/images/me2.jpg"
+              alt="Ein Bild von mir im Spiegel"
+              style="width: 200px"
+            />
+          </figure>
+          <figure>
+            <img src="/images/me.jpg" alt="Bild von mir" style="width: 200px" />
+          </figure>
+        </div>
+        <div class="text-container">
+          <h2></h2>
+          <p></p>
+        </div>
+      </section>
 
-        <section class="hobbies">
-            <h2>Meine Hobbys</h2>
-            <div class="card">
-                <h3>Programmieren</h3>
-                <p>
-                  Mein Hobby: Programmieren
-                  
-                  Programmieren ist für mich mehr als nur ein technisches Handwerk – es ist eine kreative Ausdrucksform, die es mir ermöglicht, Ideen in die digitale Realität umzusetzen. Ob ich an eigenen Projekten arbeite oder neue Technologien erkunde, das Lösen von Problemen und das Entwickeln innovativer Lösungen bereitet mir große Freude. Die Welt der Programmierung ist dynamisch und ständig im Wandel, was mich motiviert, kontinuierlich zu lernen und meine Fähigkeiten zu erweitern.</p>
-                <a href="/werdegang.html">zu meinen Projekten</a>
-            </div>
-            <div class="card"></div>
-                <h3>Lesen</h3>
-                <p>Lesen ist für mich nicht nur ein Zeitvertreib, sondern eine Leidenschaft, die mir die Möglichkeit gibt, in neue Welten einzutauchen und verschiedene Perspektiven zu entdecken. Ob spannende Romane, fesselnde Sachbücher oder inspirierende Biografien – jedes Buch eröffnet mir neue Horizonte und bereichert mein Leben auf vielfältige Weise. Ich liebe es, mich von Geschichten mitreißen zu lassen und durch das geschriebene Wort zu lernen und zu wachsen.</p>
-                <a href="/buchfavoriten.html">zu meinen Buchfavoriten</a>
-            </div>
-        </section>
+      <section class="hobbies">
+        <h2>Meine Hobbys</h2>
+        <div class="card">
+          <h3>Programmieren</h3>
+          <p>
+            Mein Hobby: Programmieren Programmieren ist für mich mehr als nur
+            ein technisches Handwerk – es ist eine kreative Ausdrucksform, die
+            es mir ermöglicht, Ideen in die digitale Realität umzusetzen. Ob ich
+            an eigenen Projekten arbeite oder neue Technologien erkunde, das
+            Lösen von Problemen und das Entwickeln innovativer Lösungen bereitet
+            mir große Freude. Die Welt der Programmierung ist dynamisch und
+            ständig im Wandel, was mich motiviert, kontinuierlich zu lernen und
+            meine Fähigkeiten zu erweitern.
+          </p>
+          <a href="/werdegang.html">zu meinen Projekten</a>
+        </div>
+        <div class="card">
+          <h3>Lesen</h3>
+          <p>
+            Lesen ist für mich nicht nur ein Zeitvertreib, sondern eine
+            Leidenschaft, die mir die Möglichkeit gibt, in neue Welten
+            einzutauchen und verschiedene Perspektiven zu entdecken. Ob
+            spannende Romane, fesselnde Sachbücher oder inspirierende Biografien
+            – jedes Buch eröffnet mir neue Horizonte und bereichert mein Leben
+            auf vielfältige Weise. Ich liebe es, mich von Geschichten mitreißen
+            zu lassen und durch das geschriebene Wort zu lernen und zu wachsen.
+          </p>
+          <a href="/buchfavoriten.html">zu meinen Buchfavoriten</a>
+        </div>
+      </section>
 
-        <section>
-            <h2>Images of my life</h2>
-            
-        </section>
+      <section>
+        <h2>Images of my life</h2>
+        <figure>
+          <img
+            src="/images/gallery1.jpg"
+            alt="Bild von einem Auto im Porsche Museum"
+            style="width: 200px"
+          />
+        </figure>
+        <figure>
+          <img
+            src="/images/gallery2.jpg"
+            alt="Bild von zwei Cocktails"
+            style="width: 200px"
+          />
+        </figure>
+        <figure>
+          <img
+            src="/images/gallery3.jpg"
+            alt="Bild von meine Schreibtisch"
+            style="width: 200px"
+          />
+        </figure>
+        <figure>
+          <img
+            src="/images/gallery4.jpg"
+            alt="Bild von einer schwarz weißen Katze"
+            style="width: 200px"
+          />
+        </figure>
+        <figure>
+          <img
+            src="/images/gallery5.jpg"
+            alt="Bild von Kaffe und Kuchen"
+            style="width: 200px"
+          />
+        </figure>
+        <figure>
+          <img
+            src="/images/gallery6.jpg"
+            alt="Bild von einen Mann, der eine weiß rote Katze im Arm hält"
+            style="width: 200px"
+          />
+        </figure>
+      </section>
     </main>
 
-
     <footer>
-        <ul>
-          <li><a href="#">Startseite</a></li>
-          <li><a href="#">Über mich</a></li>
-          <li><a href="#">Werdegang</a></li>
-          <li><a href="#">Buchfavoriten</a></li>
-          <li><a href="/error.html">Seite nicht gefunden</a></li>
+      <ul>
+        <li><a href="/index.html">Startseite</a></li>
+        <li><a href="/über-mich.html">Über mich</a></li>
+        <li><a href="/werdegang.html">Werdegang</a></li>
+        <li><a href="/buchfavoriten.html">Buchfavoriten</a></li>
+        <li><a href="/error.html">Seite nicht gefunden</a></li>
 
-  
-          <li>
-            <img src="/images/icon-email-lightm.png" alt="Meine E-mailadresse" />
-            <p>zimmer.jasmin04@gmail.com</p>
-          </li>
-          <li>
-            <img src="/images/icon-phone-lightm.png" alt="Meine Telefonnummer" />
-            <p>+49 174 9889437</p>
-          </li>
-          <li>
-            <img src="/images/icon-github-lightm.png" alt="Mein Github-Konto" />
-            <a href="https://github.com/zrjasmin">zrjasmin</a>
-          </li>
-        </ul>
-      </footer>
+        <li>
+          <img src="/images/icon-email-lightm.png" alt="Meine E-mailadresse" />
+          <p>zimmer.jasmin04@gmail.com</p>
+        </li>
+        <li>
+          <img src="/images/icon-phone-lightm.png" alt="Meine Telefonnummer" />
+          <p>+49 174 9889437</p>
+        </li>
+        <li>
+          <img src="/images/icon-github-lightm.png" alt="Mein Github-Konto" />
+          <a href="https://github.com/zrjasmin">zrjasmin</a>
+        </li>
+      </ul>
+    </footer>
   </body>
 </html>
