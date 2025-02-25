@@ -3,6 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, intiale-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
     <title>Startseite</title>
   </head>
 
@@ -10,9 +17,9 @@
     <header>
       <nav>
         <div class="logo">
-          <img />
+          <img alt="Logo" />
         </div>
-        <ul>
+        <ul class="global-nav">
           <li><a href="/index.html">Startseite</a></li>
           <li><a href="/über-mich.html">Über mich</a></li>
           <li><a href="/werdegang.html">Werdegang</a></li>
@@ -23,6 +30,10 @@
           <input type="checkbox" />
           <span class="slider round"></span>
         </label>
+
+        <img alt="Menü" />
+
+        <div class="desktop-hidden"></div>
       </nav>
 
       <h1 class="serif">Hey,</h1>
@@ -33,14 +44,21 @@
         erkunden
       </p>
       <button aria-label="Hier geht es zu weiteren Inhalten auf der Seite">
-        <img src="/images/arrow-down-lightm.png" />
+        <img
+          src="/images/arrow-down-lightm.png"
+          alt="Icon von einem nach untengerichteten Pfeil"
+        />
       </button>
     </header>
 
     <main>
-      <section class="Vorstellung">
+      <section class="Vorstellung" aria-label="kurze Vorstellung von Jasmin">
         <div>
-          <img src="/images/me.jpg" style="width: 200px" />
+          <img
+            src="/images/me.jpg"
+            alt="Bild von Jasmin, lächelend"
+            style="width: 200px"
+          />
         </div>
         <div class="text">
           <h2>Überblick: Das bin ich</h2>
@@ -52,7 +70,7 @@
         </div>
       </section>
 
-      <section class="kennen-lernen">
+      <section class="kennen-lernen" aria-label="Auswahl zum Kennenlernen">
         <h2>Möchtest du mich persönlich <i>oder professionell</i></h2>
         <div class="personal">
           <img src="/images/personal-lightm.jpg" style="width: 200px" />
@@ -65,10 +83,10 @@
           <a aria-label="Hier geht es zu meinem Werdegang"></a>
         </div>
       </section>
-      <section class="quote">
+      <section class="quote" aria-label="ein Zitat">
         <h2>You are the <i>greatest project</i> you will ever work on</h2>
       </section>
-      <section class="contact grid">
+      <section class="contact grid" aria-label="Kontaktformular">
         <div>
           <h2>Kontakt</h2>
           <ul>

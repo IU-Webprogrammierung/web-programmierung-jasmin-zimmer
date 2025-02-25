@@ -1,0 +1,66 @@
+:root {
+    --bg--dark: #222222;
+    --card--dark: #2C2C2C;
+    --font-dark: #C2C2C2;
+
+    --bg--light: #EEEEEE;
+    --card--light: #DBDBDB;
+    --font-light: #454545;
+}
+
+
+/* global styles */
+html {
+    font-size: 100%;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: var(--bg--dark);
+    background-image: url(/images/dark-bg.png);
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+h1,h2,h3,h4,h4 {
+    font-family: "Playfair Display", serif;
+    font-weight: 400;
+    color: var(--font-dark);
+
+}
+
+p, a, button {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    color: var(--font-dark);
+    text-decoration: none;
+}
+
+/*Hero Section*/
+header {
+
+}
+
+nav {
+    position: absolute;
+    background-color: var(--card--dark);
+}
+
+.global-nav {
+    
+    
+}
+
+.global-nav > li {
+    list-style-type: none;
+
+}
+
+.card {
+    background-color: var(--bg--dark);
+}
