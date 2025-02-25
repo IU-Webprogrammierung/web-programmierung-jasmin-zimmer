@@ -28,13 +28,20 @@ body {
   box-sizing: inherit;
 }
 
-h1,h2,h3,h4,h4 {
+h1,i {
     font-family: "Playfair Display", serif;
     margin: 0;
     font-weight: 400;
     color: var(--font-dark);
 
 }
+h2,h3,h4,h4 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    color: var(--font-dark);
+    margin: 0;
+}
+
 
 p, a, button {
     font-family: "Poppins", sans-serif;
@@ -51,6 +58,22 @@ h1 {
 h2 {
     font-size: clamp(1.75rem, 1.596rem + 0.6573vw, 2.1875rem);
 }
+
+section {
+    margin-inline: 1rem;
+   
+    
+}
+
+@media screen and (min-width: 1024px) {
+    section {
+        width: 90%;
+        max-width: 64rem;
+        margin: auto;
+    }    
+}
+
+
 
 
 /*Hero Section*/
@@ -285,4 +308,51 @@ header > button > img {
     }
    
 
+}
+
+
+/*Section: Vorstellung*/
+.vorstellung {
+    margin-block: 4rem 7rem ;
+  
+    & .img-container {
+        margin-bottom: 2rem;
+    }
+    & img {
+        position: relative;
+        width: 100%;
+        border-radius: 20px;
+        
+    }
+
+    & .text > h2 {
+        margin-bottom: 1rem;
+    }
+
+
+}
+
+@media screen and (min-width: 640px) {
+    .vorstellung  {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+
+        & .img-container {
+            margin-bottom: 0;
+        }
+
+        & .text {
+            margin: 2rem;
+            align-self: center;
+        }
+    }
+
+    
+}
+
+@media screen and (min-width: 768px) {
+    .vorstellung  {
+        display: grid;
+        grid-template-columns: 2fr 3fr;
+    }    
 }
