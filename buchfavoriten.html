@@ -4,39 +4,53 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Buchfavoriten</title>
+    <link rel="stylesheet" href="buchfavoriten.css" />
+    <link rel="stylesheet" href="global.css" />
   </head>
   <body>
     <header>
       <nav>
         <div class="logo">
-          <img />
+          <img alt="Logo" src="/images/icon-logo(old).png" />
         </div>
-        <ul>
-          <li><a href="/index.html">Startseite</a></li>
-          <li><a href="/über-mich.html">Über mich</a></li>
-          <li><a href="/werdegang.html">Werdegang</a></li>
-          <li><a href="/buchfavoriten.html">Buchfavoriten</a></li>
+        <ul class="nav-links">
+          <li><a href="./index.html">Startseite</a></li>
+          <li><a href="./über-mich.html">Über mich</a></li>
+          <li><a href="./werdegang.html">Werdegang</a></li>
+          <li><a href="./buchfavoriten.html">Buchfavoriten</a></li>
         </ul>
-        <label class="toggle-button">
+        <!--Toggle Button (Light & Dark Theme)-->
+        <label class="switch mobile-hidden">
           <input type="checkbox" />
-          <span class="slider round"></span>
+          <span class="slider"></span>
         </label>
+
+        <div class="desktop-hidden hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
       </nav>
 
       <h1 class="serif">Meine Buchfavoriten</h1>
       <button aria-label="Hier geht es zu weiteren Inhalten auf der Seite">
-        <img src="/images/arrow-down-lightm.png" />
+        <img
+          src="/images/arrow-down-darkm.png"
+          alt="Icon von einem nach untengerichteten Pfeil"
+        />
       </button>
     </header>
 
     <main>
-      <h2>Reading is my safe space and my wildest adventure</h2>
-      <p>
-        bekomme einen Bilck in mein Bücherregel. Von Fanatsy über Romance bis
-        hin zu Selbsthilfe-Bücher ist alles dabei. Also, schau rein!
-      </p>
+      <section class="intro">
+        <h2>Reading is my safe space and my wildest adventure</h2>
+        <p>
+          bekomme einen Bilck in mein Bücherregel. Von Fanatsy über Romance bis
+          hin zu Selbsthilfe-Bücher ist alles dabei. Also, schau rein!
+        </p>
+      </section>
 
-      <section>
+      <section class="buchübersicht">
         <div class="categories">
           <button>Fantasie</button>
           <button>Romantik</button>
@@ -53,15 +67,7 @@
             <div class="book-info">
               <h4>Asrai - Das Portal der Drachen</h4>
               <p>Magie, Identität und Dunkle Mächte</p>
-              <p>
-                folgt der jungen Protagonistin Asrai, die in einer Welt lebt, in
-                der Magie und Geheimnisse eng miteinander verwoben sind. Als sie
-                entdeckt, dass ihre eigene Herkunft mit dunklen Mächten
-                verbunden ist, muss sie sich ihrer Vergangenheit stellen und
-                herausfinden, wer sie wirklich ist. Auf ihrer Reise begegnet sie
-                Freunden und Feinden, während sie versucht, das Gleichgewicht
-                zwischen Licht und Dunkelheit zu bewahren.
-              </p>
+
               <p class="small">Liane Mars</p>
             </div>
           </div>
@@ -72,13 +78,7 @@
             <div class="book-info">
               <h4>Asrai – DRückkehr der Schatten</h4>
               <p>Freundschaft, Kräfte und Bedrohung</p>
-              <p>
-                In der Fortsetzung muss Asrai sich erneut mit ihrer
-                Vergangenheit auseinandersetzen, als alte Feinde zurückkehren
-                und neue Bedrohungen auftauchen. Sie entdeckt verborgene Kräfte
-                in sich und lernt, dass Freundschaft und Vertrauen entscheidend
-                sind, um die Dunkelheit zu besiegen.
-              </p>
+
               <p class="small">Liane Mars</p>
             </div>
           </div>
@@ -89,13 +89,7 @@
             <div class="book-info">
               <h4>Asrai - Der Weg des Lichts</h4>
               <p class="stichwörter">Entscheidung, Abenteuer und Schicksal</p>
-              <p>
-                Asrai begibt sich auf eine gefährliche Reise, um das
-                Gleichgewicht zwischen Licht und Dunkelheit endgültig
-                wiederherzustellen. Auf ihrem Weg trifft sie auf neue Verbündete
-                und muss schwierige Entscheidungen treffen, die ihr Schicksal
-                und das ihrer Welt beeinflussen werden.
-              </p>
+
               <p class="small">Liane Mars</p>
             </div>
           </div>
@@ -107,14 +101,7 @@
             <div class="book-info">
               <h4>Bridge Kingdom – Der Schwur der Spionin</h4>
               <p>Intrige, Loyalität und Politik</p>
-              <p>
-                In „Bridge Kingdom“ wird die junge Prinzessin Lara in eine
-                politische Intrige verwickelt, als sie mit dem König eines
-                feindlichen Reiches verheiratet wird. Sie muss ihre Loyalität
-                zwischen ihrem eigenen Volk und ihrem Ehemann abwägen, während
-                sie versucht, das Geheimnis der Brücke zu lüften, die ihre
-                beiden Königreiche trennt.
-              </p>
+
               <p class="small">Danielle L. Jensen</p>
             </div>
           </div>
@@ -125,14 +112,7 @@
             <div class="book-info">
               <h4>Bridge Kingdom – Der Verrat der Königin</h4>
               <p>Vertrauen, Machtspiele und Frieden</p>
-              <p>
-                Im zweiten Teil von „Bridge Kingdom“ vertieft sich die Beziehung
-                zwischen Lara und ihremhemann, während sie sich den
-                Herausforderungen ihrer Königreiche stellen. Intrigen und
-                Machtspiele nehmen zu, und Lara muss entscheiden, wem sie
-                wirklich vertrauen kann, während sie versucht, Frieden zwischen
-                den verfeindeten Nationen zu schaffen
-              </p>
+
               <p class="small">Danielle L. Jensen</p>
             </div>
           </div>
@@ -144,12 +124,7 @@
             <div class="book-info">
               <h4>Broken Blade</h4>
               <p>Kampf, Selbstfindung und Stärke</p>
-              <p>
-                folgt der Geschichte von einer Kriegerin, die sich gegen die
-                Erwartungen ihrer Familie und Gesellschaft auflehnt. Sie kämpft
-                nicht nur gegen äußere Feinde, sondern auch gegen innere Dämonen
-                und entdeckt dabei ihre wahre Stärke.
-              </p>
+
               <p class="small">Melissa Blair</p>
             </div>
           </div>
@@ -159,13 +134,7 @@
             </div>
             <div class="book-info">
               <h4>Shadow Crown</h4>
-              <p>
-                In „Shadow-Crown“ wird eine Welt voller Magie und Geheimnisse
-                erkundet, in der die Protagonistin mit ihrer dunklen
-                Vergangenheit konfrontiert wird. Sie muss lernen, ihre Kräfte zu
-                kontrollieren und sich den Schatten zu stellen, die sie
-                verfolgen.
-              </p>
+
               <p class="small">Melissa Blair</p>
             </div>
           </div>
@@ -177,13 +146,7 @@
             <div class="book-info">
               <h4>Die Erwählte</h4>
               <p>Wettkampf, Geheimnisse und Assassinin</p>
-              <p>
-                Celaena Sardothien, eine gefangene Assassinin, wird aus dem
-                Gefängnis befreit, um an einem Wettkampf teilzunehmen, bei dem
-                der Sieger zum königlichen Champion ernannt wird. Während des
-                Wettbewerbs entdeckt sie dunkle Geheimnisse über das Königreich
-                und ihre eigene Vergangenheit.
-              </p>
+
               <p class="small">Sarah J. Maas</p>
             </div>
           </div>
@@ -194,13 +157,7 @@
             <div class="book-info">
               <h4>Kriegerin im Schatte</h4>
               <p>Loyalität, Dunkle Mächte und Konflikt</p>
-              <p>
-                Nach dem Wettkampf muss Celaena sich mit ihrer neuen Rolle als
-                Champion auseinandersetzen und gleichzeitig gegen die dunklen
-                Mächte kämpfen, die das Königreich bedrohen. Ihre Loyalität wird
-                auf die Probe gestellt, als sie mehr über die Machenschaften des
-                Königs erfährt.
-              </p>
+
               <p class="small">Sarah J. Maas</p>
             </div>
           </div>
@@ -211,12 +168,7 @@
             <div class="book-info">
               <h4>Erbin des Feuers</h4>
               <p>Identität, Meisterschaft und Verbündete</p>
-              <p>
-                Celaena reist nach Wendlyn, um ihre Fähigkeiten zu meistern und
-                ihre wahre Identität zu entdecken. Dort trifft sie auf neue
-                Verbündete und muss sich ihrer Vergangenheit stellen, während
-                sie gegen eine drohende Dunkelheit kämpft.
-              </p>
+
               <p class="small">Sarah J. Maas</p>
             </div>
           </div>
