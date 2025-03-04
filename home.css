@@ -1,0 +1,305 @@
+h1 {
+    font-size: clamp(7.25rem, 5.2254rem + 8.6385vw, 13rem);}
+
+
+/*angepasster Header für Startseite*/
+header {
+    position: relative;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("/images/hero-darkm.jpg") center center;
+    
+    background-size:cover; 
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 20px;
+    
+} 
+
+.text-wrapper {
+    margin-inline: 1rem;
+}
+
+.text-wrapper > h2 {
+    margin-bottom: 1rem;
+}
+
+header > button {
+    display: flex;
+    justify-content: center;
+    background: none;
+    border: 1px solid var(--font-dark);
+    border-radius: 100%;
+    width: 2.5rem;
+    height: 2.5rem;
+    margin: auto;
+}
+
+header > button > img {
+    padding-top: 0.7rem;
+    width: 1rem;
+    height: 1.5rem;
+   
+}
+
+@media screen and (min-width: 640px) {
+    .text-wrapper {
+        display: flex;
+        margin-bottom: 3rem;
+    }
+
+    .detail-text {
+        padding: 4rem 0rem 0rem 1rem;
+    }
+    .detail-text > h2{
+        margin-bottom: 0.75rem;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    header {
+       padding: 2rem;
+    }
+
+    .text-wrapper {
+        margin: auto;
+        width: 90%;
+        max-width: 950px;
+        margin-bottom: 2rem;
+    }
+    header > button {
+        margin-bottom: 1rem;
+    }
+   
+
+}
+
+/*Section: Vorstellung*/
+.vorstellung {
+    margin-block: 4rem 7rem ;
+  
+    & .img-container {
+        margin-bottom: 2rem;
+    }
+    & img {
+        position: relative;
+        width: 100%;
+        border-radius: 20px;
+        
+    }
+
+    & .text > h2 {
+        margin-bottom: 1rem;
+    }
+
+
+}
+
+@media screen and (min-width: 640px) {
+    .vorstellung  {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+
+        & .img-container {
+            margin-bottom: 0;
+        }
+
+        & .text {
+            margin: 2rem;
+            align-self: center;
+        }
+    }
+
+    
+}
+
+@media screen and (min-width: 768px) {
+    .vorstellung  {
+        display: grid;
+        grid-template-columns: 2fr 3fr;
+    }    
+}
+
+
+/*kennen-lernen Section*/
+.kennen-lernen {
+    
+
+    h2 {
+        margin-bottom: 1rem;
+    }
+
+    & .professionell, .personal {
+        display: flex;
+        align-items: center;
+        border-block: 1px solid var(--font-dark);
+        padding: 1rem;
+        
+    }
+    .img-container {
+        width: 50%;
+        margin-right: 2rem;
+
+    }
+
+    img {
+        width: 100%;
+        /*width: 10.625rem;*/
+        height: 100px;
+        object-fit: cover;
+        border-radius: 20px;
+    }
+
+    a {
+        width: 50%
+    }
+    
+}
+
+@media screen and (min-width: 640px) {
+    .kennen-lernen {
+        
+
+        & .personal {
+            flex-direction: row-reverse;
+        }
+
+        h3 {
+            text-align: center;
+        }
+    }
+
+    
+}
+
+
+/*Zitat Section*/ 
+.quote {
+    margin-block: 7rem;
+}
+
+@media screen and (min-width: 640px) {
+    .quote {
+        
+
+        h2 {
+            margin-inline: auto;
+            text-align: center;
+            width: 80%;
+        }
+    }
+}
+
+
+/*Kontakt Section*/
+.contact {
+    background-color: var(--card--dark);
+    border-radius: 20px;
+    padding: 1.5rem 1rem;
+    margin-bottom: 5rem;
+
+    ul {
+        padding: 0;
+    }
+
+    li {
+       list-style-type: none; 
+       display: flex;
+       margin-bottom: 1rem;
+    }
+
+    .icon {
+        
+        margin-right: 1rem;
+    
+    }
+    .img {
+        width: 100%;
+        height: 300px;
+        margin-top: 1rem;
+        object-fit: cover;
+        border-radius: 0.5rem
+    }
+}
+
+@media screen and (min-width: 640px) {
+    .contact {
+        padding: 3rem 2rem;
+    }
+   
+    ul {
+        margin-block: 1.5rem;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .contact {
+        display: grid;
+        grid-template-columns: 2fr 2fr;
+        padding-left: 3rem;
+
+        .contact-text {
+            align-self: center;
+        }
+         .img {
+            margin-top: 0;
+        }
+    }
+
+    
+}
+
+
+/*Footer*/ 
+footer {
+    background-color: var(--card--dark);
+    padding: 2rem;
+
+    ul {
+        padding-left: 0;
+        margin: 0;
+        
+    }
+
+    li {
+        list-style-type: none;
+        margin-bottom: 1rem
+        
+    }
+
+    .contact-li {
+
+        display: flex;
+    
+         img {
+            margin-right: 1rem;
+         }
+
+    }
+
+    .contact-li:nth-child(6) {
+        margin-top: 2rem;
+
+    }
+}
+
+@media screen and (min-width: 640px) {
+    footer {
+        padding: 3rem;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    footer {
+        
+
+        ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin-inline: auto;
+        width: 80%;
+        
+    }
+        
+    }
+
+    
+}
