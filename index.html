@@ -20,10 +20,10 @@
           <img alt="Logo" src="/images/icon-logo(old).png" />
         </div>
         <ul class="nav-links">
-          <li><a href="/index.html">Startseite</a></li>
-          <li><a href="/über-mich.html">Über mich</a></li>
-          <li><a href="/werdegang.html">Werdegang</a></li>
-          <li><a href="/buchfavoriten.html">Buchfavoriten</a></li>
+          <li><a href="./index.html">Startseite</a></li>
+          <li><a href="./über-mich.html">Über mich</a></li>
+          <li><a href="./werdegang.html">Werdegang</a></li>
+          <li><a href="./buchfavoriten.html">Buchfavoriten</a></li>
         </ul>
         <!--Toggle Button (Light & Dark Theme)-->
         <label class="switch mobile-hidden">
@@ -75,70 +75,88 @@
       <section class="kennen-lernen" aria-label="Auswahl zum Kennenlernen">
         <h2>Möchtest du mich persönlich <i>oder professionell</i></h2>
         <div class="personal">
-          <img src="/images/personal-darkm.jpg" style="width: 200px" />
-          <h3>Persönlich</h3>
-          <a aria-label="Hier geht es zur Über-mich-Seite"></a>
+          <div class="overlay img-container">
+            <img src="/images/professional-darkm.jpg" />
+          </div>
+
+          <a
+            href="./über-mich.html"
+            aria-label="Hier geht es zur Über-mich-Seite"
+          >
+            <h3>Persönlich</h3>
+          </a>
         </div>
         <div class="professionell">
-          <img src="/images/professional-darkm.jpg" style="width: 200px" />
-          <h3>Professionell</h3>
-          <a aria-label="Hier geht es zu meinem Werdegang"></a>
+          <div class="overlay img-container">
+            <img src="/images/professional-darkm.jpg" />
+          </div>
+          <a
+            href="./werdegang.html"
+            aria-label="Hier geht es zu meinem Werdegang"
+          >
+            <h3>Professionell</h3>
+          </a>
         </div>
       </section>
+
       <section class="quote" aria-label="ein Zitat">
         <h2>You are the <i>greatest project</i> you will ever work on</h2>
       </section>
+
       <section class="contact grid" aria-label="Kontaktformular">
-        <div>
+        <div class="contact-text">
           <h2>Kontakt</h2>
           <ul>
             <li>
               <img
-                src="/images/icon-email-lightm.png"
+                src="./images/icon-email-darkm.png"
                 alt="Meine E-mailadresse"
+                class="icon"
               />
               <p>zimmer.jasmin04@gmail.com</p>
             </li>
             <li>
               <img
-                src="/images/icon-phone-lightm.png"
+                src="./images/icon-phone-darkm.png"
                 alt="Meine Telefonnummer"
+                class="icon"
               />
               <p>+49 174 9889437</p>
             </li>
             <li>
               <img
-                src="/images/icon-github-lightm.png"
+                src="./images/icon-github-darkm.png"
                 alt="Mein Github-Konto"
+                class="icon"
               />
               <a href="https://github.com/zrjasmin">zrjasmin</a>
             </li>
           </ul>
         </div>
         <div>
-          <img src="/images/contact-lightm.jpg" style="width: 200px" />
+          <img class="img" src="./images/contact-darkm.jpg" />
         </div>
       </section>
     </main>
 
     <footer>
       <ul>
-        <li><a href="/index.html">Startseite</a></li>
-        <li><a href="/über-mich.html">Über mich</a></li>
-        <li><a href="/werdegang.html">Werdegang</a></li>
-        <li><a href="/buchfavoriten.html">Buchfavoriten</a></li>
-        <li><a href="/error.html">Seite nicht gefunden</a></li>
+        <li><a href="./index.html">Startseite</a></li>
+        <li><a href="./über-mich.html">Über mich</a></li>
+        <li><a href="./werdegang.html">Werdegang</a></li>
+        <li><a href="./buchfavoriten.html">Buchfavoriten</a></li>
+        <li><a href="./error.html">Seite nicht gefunden</a></li>
 
         <li>
-          <img src="/images/icon-email-lightm.png" alt="Meine E-mailadresse" />
+          <img src="./images/icon-email-darkm.png" alt="Meine E-mailadresse" />
           <p>zimmer.jasmin04@gmail.com</p>
         </li>
         <li>
-          <img src="/images/icon-phone-lightm.png" alt="Meine Telefonnummer" />
+          <img src="./images/icon-phone-darkm.png" alt="Meine Telefonnummer" />
           <p>+49 174 9889437</p>
         </li>
         <li>
-          <img src="/images/icon-github-lightm.png" alt="Mein Github-Konto" />
+          <img src="./images/icon-github-darkm.png" alt="Mein Github-Konto" />
           <a href="https://github.com/zrjasmin">zrjasmin</a>
         </li>
       </ul>

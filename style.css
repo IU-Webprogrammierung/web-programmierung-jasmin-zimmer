@@ -56,8 +56,12 @@ p, a, button {
 h1 {
     font-size: clamp(7.25rem, 5.2254rem + 8.6385vw, 13rem);}
 h2 {
-    font-size: clamp(1.75rem, 1.596rem + 0.6573vw, 2.1875rem);
+    font-size: clamp(1.5rem, 1.596rem + 0.6573vw, 2.1875rem);
 }
+
+h3 {
+    font-size: clamp(1.25rem, 1.0739rem + 0.7512vw, 1.75rem);}
+
 
 section {
     margin-inline: 1rem;
@@ -355,4 +359,133 @@ header > button > img {
         display: grid;
         grid-template-columns: 2fr 3fr;
     }    
+}
+
+
+/*kennen-lernen Section*/
+.kennen-lernen {
+    
+
+    h2 {
+        margin-bottom: 1rem;
+    }
+
+    & .professionell, .personal {
+        display: flex;
+        align-items: center;
+        border-block: 1px solid var(--font-dark);
+        padding: 1rem;
+        
+    }
+    .img-container {
+        width: 50%;
+        margin-right: 2rem;
+
+    }
+
+    img {
+        width: 100%;
+        /*width: 10.625rem;*/
+        height: 100px;
+        object-fit: cover;
+        border-radius: 20px;
+    }
+
+    a {
+        width: 50%
+    }
+    
+}
+
+@media screen and (min-width: 640px) {
+    .kennen-lernen {
+        
+
+        & .personal {
+            flex-direction: row-reverse;
+        }
+
+        h3 {
+            text-align: center;
+        }
+    }
+
+    
+}
+
+
+/*Zitat Section*/ 
+.quote {
+    margin-block: 7rem;
+}
+
+@media screen and (min-width: 640px) {
+    .quote {
+        
+
+        h2 {
+            margin-inline: auto;
+            text-align: center;
+            width: 80%;
+        }
+    }
+}
+
+
+/*Kontakt Section*/
+.contact {
+    background-color: var(--card--dark);
+    border-radius: 20px;
+    padding: 1.5rem 1rem;
+
+    ul {
+        padding: 0;
+    }
+
+    li {
+       list-style-type: none; 
+       display: flex;
+       margin-bottom: 1rem;
+    }
+
+    .icon {
+        width: 1.5rem;
+        height: auto;
+        margin-right: 1rem;
+    
+    }
+    .img {
+        width: 100%;
+        height: 300px;
+        margin-top: 1rem;
+        object-fit: cover;
+        border-radius: 0.5rem
+    }
+}
+
+@media screen and (min-width: 640px) {
+    .contact {
+        padding: 3rem 2rem;
+    }
+   
+    ul {
+        margin-block: 1.5rem;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .contact {
+        display: grid;
+        grid-template-columns: 2fr 2fr;
+        padding-left: 3rem;
+
+        .contact-text {
+            align-self: center;
+        }
+         .img {
+            margin-top: 0;
+        }
+    }
+
+    
 }
