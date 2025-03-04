@@ -68,6 +68,11 @@ section {
    
     
 }
+.icon {
+    width: 1.5rem;
+    height: auto;
+}
+
 
 @media screen and (min-width: 1024px) {
     section {
@@ -437,6 +442,7 @@ header > button > img {
     background-color: var(--card--dark);
     border-radius: 20px;
     padding: 1.5rem 1rem;
+    margin-bottom: 5rem;
 
     ul {
         padding: 0;
@@ -449,8 +455,7 @@ header > button > img {
     }
 
     .icon {
-        width: 1.5rem;
-        height: auto;
+        
         margin-right: 1rem;
     
     }
@@ -485,6 +490,63 @@ header > button > img {
          .img {
             margin-top: 0;
         }
+    }
+
+    
+}
+
+
+/*Footer*/ 
+footer {
+    background-color: var(--card--dark);
+    padding: 2rem;
+
+    ul {
+        padding-left: 0;
+        margin: 0;
+        
+    }
+
+    li {
+        list-style-type: none;
+        margin-bottom: 1rem
+        
+    }
+
+    .contact-li {
+
+        display: flex;
+    
+         img {
+            margin-right: 1rem;
+         }
+
+    }
+
+    .contact-li:nth-child(6) {
+        margin-top: 2rem;
+
+    }
+}
+
+@media screen and (min-width: 640px) {
+    footer {
+        padding: 3rem;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    footer {
+        
+
+        ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin-inline: auto;
+        width: 80%;
+        
+    }
+        
     }
 
     
