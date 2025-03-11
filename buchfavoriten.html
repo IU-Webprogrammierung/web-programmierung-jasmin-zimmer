@@ -6,6 +6,13 @@
     <title>Buchfavoriten</title>
     <link rel="stylesheet" href="buchfavoriten.css" />
     <link rel="stylesheet" href="global.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="rating.js"></script>
+    <script></script>
   </head>
   <body>
     <header>
@@ -43,9 +50,9 @@
 
     <main>
       <section class="intro">
-        <h2>Reading is my safe space and my wildest adventure</h2>
+        <h2><i>Reading is my safe space and my wildest adventure</i></h2>
         <p>
-          bekomme einen Bilck in mein Bücherregel. Von Fanatsy über Romance bis
+          bekomme einen Blick in mein Bücherregel. Von Fanatsy über Romance bis
           hin zu Selbsthilfe-Bücher ist alles dabei. Also, schau rein!
         </p>
       </section>
@@ -64,10 +71,9 @@
             <div class="book-cover">
               <img src="/images/buecher/Asrai-1.jpg" alt="" />
             </div>
-            <div class="book-info">
+            <div class="book-info" data-rating="4">
               <h4>Asrai - Das Portal der Drachen</h4>
               <p>Magie, Identität und Dunkle Mächte</p>
-
               <p class="small">Liane Mars</p>
             </div>
           </div>
@@ -75,10 +81,9 @@
             <div class="book-cover">
               <img src="/images/buecher/Asrai-2.jpg" alt="" />
             </div>
-            <div class="book-info">
+            <div class="book-info" data-rating="5">
               <h4>Asrai – DRückkehr der Schatten</h4>
               <p>Freundschaft, Kräfte und Bedrohung</p>
-
               <p class="small">Liane Mars</p>
             </div>
           </div>
@@ -86,7 +91,7 @@
             <div class="book-cover">
               <img src="/images/buecher/Asrai-3.jpg" alt="" />
             </div>
-            <div class="book-info">
+            <div class="book-info" data-rating="3.5">
               <h4>Asrai - Der Weg des Lichts</h4>
               <p class="stichwörter">Entscheidung, Abenteuer und Schicksal</p>
 
@@ -98,7 +103,7 @@
             <div class="book-cover">
               <img src="/images/buecher/bride-kingdom-1.jpg" alt="" />
             </div>
-            <div class="book-info">
+            <div class="book-info" data-rating="4">
               <h4>Bridge Kingdom – Der Schwur der Spionin</h4>
               <p>Intrige, Loyalität und Politik</p>
 
@@ -109,7 +114,7 @@
             <div class="book-cover">
               <img src="/images/buecher/Bride-Kingdom-2.jpg" alt="" />
             </div>
-            <div class="book-info">
+            <div class="book-info" data-rating="3.5">
               <h4>Bridge Kingdom – Der Verrat der Königin</h4>
               <p>Vertrauen, Machtspiele und Frieden</p>
 
@@ -121,7 +126,7 @@
             <div class="book-cover">
               <img src="/images/buecher/broken-blade.jpg" alt="" />
             </div>
-            <div class="book-info">
+            <div class="book-info" data-rating="5">
               <h4>Broken Blade</h4>
               <p>Kampf, Selbstfindung und Stärke</p>
 
@@ -132,8 +137,11 @@
             <div class="book-cover">
               <img src="/images/buecher/Shadow-crown.jpg" alt="" />
             </div>
-            <div class="book-info">
+            <div class="book-info" data-rating="4">
               <h4>Shadow Crown</h4>
+
+              <!--ändern-->
+              <p>Wettkampf, Geheimnisse und Assassinin</p>
 
               <p class="small">Melissa Blair</p>
             </div>
@@ -143,7 +151,7 @@
             <div class="book-cover">
               <img src="/images/buecher/throne-of-glass-1.jpg" alt="" />
             </div>
-            <div class="book-info">
+            <div class="book-info" data-rating="5">
               <h4>Die Erwählte</h4>
               <p>Wettkampf, Geheimnisse und Assassinin</p>
 
@@ -154,7 +162,7 @@
             <div class="book-cover">
               <img src="/images/buecher/crown-of-midnight.jpg" alt="" />
             </div>
-            <div class="book-info">
+            <div class="book-info" data-rating="4">
               <h4>Kriegerin im Schatte</h4>
               <p>Loyalität, Dunkle Mächte und Konflikt</p>
 
@@ -165,7 +173,7 @@
             <div class="book-cover">
               <img src="/images/buecher/heir-of-fire.jpg" alt="" />
             </div>
-            <div class="book-info">
+            <div class="book-info" data-rating="3">
               <h4>Erbin des Feuers</h4>
               <p>Identität, Meisterschaft und Verbündete</p>
 
@@ -176,15 +184,10 @@
             <div class="book-cover">
               <img src="/images/buecher/queen-of-shadows.jpg" alt="" />
             </div>
-            <div class="book-info">
+            <div class="book-info" data-rating="4">
               <h4>Königin der Finsternis</h4>
               <p>Rache, Freundschaft und Konfrontation</p>
-              <p>
-                Celaena kehrt nach Adarlan zurück, um ihre Freunde zu retten und
-                den tyrannischen König zu stürzen. Sie muss sich ihren Feinden
-                stellen und gleichzeitig ihre eigenen inneren Konflikte
-                überwinden.
-              </p>
+
               <p class="small">Sarah J. Maas</p>
             </div>
           </div>
@@ -192,15 +195,10 @@
             <div class="book-cover">
               <img src="/images/buecher/empire-of-storms.jpg" alt="" />
             </div>
-            <div class="book-info">
+            <div class="book-info" data-rating="4">
               <h4>Die Sturmbezwingerin</h4>
               <p>Krieg, Allianzen und Strategie</p>
-              <p>
-                Inmitten eines Krieges zwischen verschiedenen Königreichen muss
-                Celaena strategische Allianzen bilden und sich den
-                Herausforderungen stellen, die mit ihrer Rolle als Erbin des
-                Thrones verbunden sind.
-              </p>
+
               <p class="small">Sarah J. Maas</p>
             </div>
           </div>
@@ -208,14 +206,10 @@
             <div class="book-cover">
               <img src="/images/buecher/tower-of-dawn.jpg" alt="" />
             </div>
-            <div class="book-info">
+            <div class="book-info" data-rating="5">
               <h4>Der verwundete Krieger</h4>
               <p>Heilung, Entwicklung und Unterstützung</p>
-              <p>
-                Diese Geschichte folgt Chaol Westfall auf seiner Reise nach
-                Antica zur Heilung seiner Verletzungen und zur Suche nach
-                Unterstützung im Kampf gegen das Böse in Adarlan.
-              </p>
+
               <p class="small">Sarah J. Maas</p>
             </div>
           </div>
@@ -223,14 +217,10 @@
             <div class="book-cover">
               <img src="/images/buecher/kingdom-of-ash.jpg" alt="" />
             </div>
-            <div class="book-info">
+            <div class="book-info" data-rating="5">
               <h4>Herrscherin über Asche und Zorn</h4>
               <p>Vereinigung, Schicksal und Finaler Kampf</p>
-              <p>
-                Im finalen Band müssen alle Charaktere zusammenarbeiten, um das
-                Böse endgültig zu besiegen und das Schicksal ihrer Welt zu
-                entscheiden
-              </p>
+
               <p class="small">Sarah J. Maas</p>
             </div>
           </div>
@@ -239,15 +229,10 @@
             <div class="book-cover">
               <img src="/images/buecher/Dornen-und-Rosen.jpg" alt="" />
             </div>
-            <div class="book-info">
+            <div class="book-info" data-rating="3">
               <h4>Dornen und Rosen</h4>
               <p>Entführung, Magie und Liebe</p>
-              <p>
-                Feyre Archeron, eine junge Jägerin, wird in das Reich der Fae
-                entführt, nachdem sie einen Wolf getötet hat. Dort trifft sie
-                auf Tamlin, den High Lord des Frühlingshofes, und entdeckt eine
-                Welt voller Magie, Intrigen und verbotener Liebe.
-              </p>
+
               <p class="small">Sarah J. Maas</p>
             </div>
           </div>
@@ -255,16 +240,10 @@
             <div class="book-cover">
               <img src="/images/buecher/Flammen-und-Finsternis.jpg" alt="" />
             </div>
-            <div class="book-info">
+            <div class="book-info" data-rating="5">
               <h4>Flammen und Finsternis</h4>
               <p>Konsequenzen, Dunkle Mächte und Verbündete</p>
-              <p>
-                Feyre muss sich den Konsequenzen ihrer Entscheidungen aus dem
-                ersten Band stellen und sich mit den dunklen Mächten
-                auseinandersetzen, die das Reich bedrohen. Ihre Beziehung zu
-                Tamlin wird auf die Probe gestellt, während sie neue Verbündete
-                findet.
-              </p>
+
               <p class="small">Sarah J. Maas</p>
             </div>
           </div>
@@ -272,15 +251,10 @@
             <div class="book-cover">
               <img src="/images/buecher/Sterne-und-Schwerter.jpg" alt="" />
             </div>
-            <div class="book-info">
+            <div class="book-info" data-rating="4">
               <h4>Sterne und Schwerter</h4>
               <p>Kampf, Freiheit und Energie</p>
-              <p>
-                Im finalen Kampf gegen die Bedrohung durch den König von Hybern
-                muss Feyre ihre Kräfte bündeln und sich ihren Ängsten stellen.
-                Die Geschichte entfaltet sich in einem epischen Konflikt um
-                Freiheit und Liebe
-              </p>
+
               <p class="small">Sarah J. Maas</p>
             </div>
           </div>
@@ -288,16 +262,10 @@
             <div class="book-cover">
               <img src="/images/buecher/Frost-und-Mondlicht.jpg" alt="" />
             </div>
-            <div class="book-info">
+            <div class="book-info" data-rating="4">
               <h4>Frost und Mondlicht</h4>
               <p>Charakterentwicklung, Beziehungen</p>
-              <p>
-                In diesem Band handelt es sich um eine Sammlung von
-                Kurzgeschichten, die in der Welt von „Reich der Sieben Höfe“
-                spielen. Die Geschichten bieten Einblicke in das Leben der
-                Charaktere nach den Ereignissen der Hauptreihe und beleuchten
-                ihre Beziehungen, Herausforderungen und Entwicklungen.
-              </p>
+
               <p class="small">Sarah J. Maas</p>
             </div>
           </div>
@@ -305,16 +273,10 @@
             <div class="book-cover">
               <img src="/images/buecher/Silbernes-Feuer.jpg" alt="" />
             </div>
-            <div class="book-info">
+            <div class="book-info" data-rating="5">
               <h4>Silbernes Feuer</h4>
               <p>Identität, politische Intrigen und Magie</p>
-              <p>
-                Dieses Buch folgt einer neuen Protagonistin, die in die Welt der
-                Fae eingeführt wird. Es geht um ihre Reise, ihre Identität zu
-                finden, während sie sich mit politischen Intrigen und magischen
-                Herausforderungen auseinandersetzt. Die Geschichte verknüpft
-                neue Charaktere mit den bereits bekannten aus der Reihe.
-              </p>
+
               <p class="small">Sarah J. Maas</p>
             </div>
           </div>
@@ -323,19 +285,10 @@
             <div class="book-cover">
               <img src="/images/buecher/Fourth-Wing.jpg" alt="" />
             </div>
-            <div class="book-info">
+            <div class="book-info" data-rating="4.5">
               <h4>Fourth Wing</h4>
               <p>Drachenreiter, Intrigen und Selbstbehauptung</p>
-              <p>
-                In einer Welt, in der Drachenreiter eine zentrale Rolle spielen,
-                folgt die Geschichte Violet Sorrengail, die sich an der
-                prestigeträchtigen Kriegsakademie von Basgiath einschreibt.
-                Trotz ihrer körperlichen Schwäche kämpft sie darum, sich in
-                einer von Macht und Intrigen dominierten Umgebung zu behaupten.
-                Violet muss sich nicht nur gegen ihre Mitschüler behaupten,
-                sondern auch gegen die Herausforderungen, die mit dem Reiten
-                eines Drachen verbunden sind.
-              </p>
+
               <p class="small">Rebecca Yarros</p>
             </div>
           </div>
@@ -344,18 +297,10 @@
             <div class="book-cover">
               <img src="/images/buecher/ZA-1.jpg" alt="" />
             </div>
-            <div class="book-info">
+            <div class="book-info" data-rating="5">
               <h4>Das Erwachen</h4>
               <p>Magisches Erbe, Schwesternschaft und Kräfte</p>
-              <p>
-                Die Zwillinge Tory und Darcy Bennett entdecken, dass sie
-                Erbinnen eines magischen Erbes sind und an der Zodiac Academy
-                eingeschrieben werden müssen. Dort müssen sie sich mit anderen
-                magischen Wesen auseinandersetzen und lernen, ihre Kräfte zu
-                kontrollieren. Die Schwestern stehen vor Herausforderungen,
-                während sie versuchen, ihren Platz in dieser neuen Welt zu
-                finden.
-              </p>
+
               <p class="small">Caroline Peckham</p>
             </div>
           </div>
@@ -363,17 +308,10 @@
             <div class="book-cover">
               <img src="/images/buecher/ZA-2.jpg" alt="" />
             </div>
-            <div class="book-info">
+            <div class="book-info" data-rating="5">
               <h4>Skrupellose Fae</h4>
               <p>Konflikte, Dunkle Mächte und Identität</p>
-              <p>
-                Im zweiten Band vertiefen sich die Konflikte an der Zodiac
-                Academy, während Tory und Darcy weiterhin ihre Kräfte entwickeln
-                und sich den dunklen Mächten stellen müssen, die das
-                Gleichgewicht der magischen Welt bedrohen. Ihre Beziehungen zu
-                anderen Charakteren werden komplexer, während sie versuchen,
-                ihre Identität zu finden.
-              </p>
+
               <p class="small">Caroline Peckham</p>
             </div>
           </div>
@@ -381,17 +319,9 @@
             <div class="book-cover">
               <img src="/images/buecher/shatter-me.jpg" alt="" />
             </div>
-            <div class="book-info">
+            <div class="book-info" data-rating="4">
               <h4>Shatter Me</h4>
               <p>Isolation, Tödliche Berührung und Freiheit</p>
-              <p>
-                Juliette Ferrars hat eine tödliche Berührung – jeder Mensch, den
-                sie berührt, stirbt. Nach Jahren der Isolation wird sie von
-                einer tyrannischen Regierung gefangen gehalten und als Waffe
-                betrachtet. Als ein neuer Gefangener namens Adam auftaucht,
-                beginnt Juliette zu kämpfen – nicht nur um ihr Überleben,
-                sondern auch um ihre Freiheit und Identität.
-              </p>
               <p class="small">Tahereh Mafi</p>
             </div>
           </div>
@@ -399,20 +329,10 @@
             <div class="book-cover">
               <img src="/images/buecher/unravel-me.jpg" alt="" />
             </div>
-            <div class="book-info">
+            <div class="book-info" data-rating="3.5">
               <h4>Unravel me</h4>
               <p>Selbstfindung, Machtkampf und komplexe Beziehungen</p>
-              <p>
-                Nach den Ereignissen des ersten Bandes muss Juliette Ferrars
-                sich mit den Konsequenzen ihrer Entscheidungen
-                auseinandersetzen. Sie wird in eine neue Umgebung gebracht, wo
-                sie auf andere Menschen mit besonderen Fähigkeiten trifft,
-                darunter Warner, der eine komplexe Beziehung zu ihr hat. Während
-                Juliette versucht, ihre Kräfte zu kontrollieren und ihre
-                Identität zu finden, wird sie in einen Machtkampf verwickelt,
-                der nicht nur ihr Leben, sondern auch das Schicksal der Welt
-                beeinflussen könnte./p>
-              </p>
+
               <p class="small">Tahereh Mafi</p>
             </div>
           </div>
@@ -421,15 +341,8 @@
             <div class="book-cover">
               <img src="/images/buecher/durch-die-kälteste-nacht.jpg" alt="" />
             </div>
-            <div class="book-info">
+            <div class="book-info" data-rating="4">
               <h4>Durch die kälteste Nacht</h4>
-              <p>
-                In diesem Buch geht es um die Herausforderungen und Kämpfe der
-                Protagonisten, die sich in einer emotionalen und oft
-                schmerzhaften Reise befinden. Sie müssen sich ihren Ängsten und
-                der Dunkelheit stellen, während sie versuchen, einen Weg zu
-                finden, um durch die schwierigsten Zeiten zu navigieren.
-              </p>
               <p class="small">Brittainy Cherry</p>
             </div>
           </div>
@@ -440,14 +353,8 @@
                 alt=""
               />
             </div>
-            <div class="book-info">
+            <div class="book-info" data-rating="5">
               <h4>Gegen den bittersten Sturm</h4>
-              <p>
-                Dieses Buch thematisiert den Kampf gegen äußere und innere
-                Stürme. Die Charaktere stehen vor großen Herausforderungen, die
-                sie an ihre Grenzen bringen. Es geht um Mut, Entschlossenheit
-                und das Streben nach Frieden inmitten des Chaos.
-              </p>
               <p class="small">Brittainy Cherry</p>
             </div>
           </div>
@@ -455,15 +362,8 @@
             <div class="book-cover">
               <img src="/images/buecher/über-die-dunkelste-See.jpg" alt="" />
             </div>
-            <div class="book-info">
+            <div class="book-info" data-rating="5">
               <h4>Über die dunkelste See</h4>
-              <p>
-                In dieser Geschichte wird eine metaphorische Reise über das
-                Wasser beschrieben, die sowohl physische als auch emotionale
-                Tiefen umfasst. Die Protagonisten müssen sich ihren Ängsten
-                stellen und lernen, dass selbst in den dunkelsten Momenten
-                Hoffnung und Licht gefunden werden können.
-              </p>
               <p class="small">Brittainy Cherry</p>
             </div>
           </div>
@@ -471,15 +371,8 @@
             <div class="book-cover">
               <img src="/images/buecher/bis-zum-hellsten-Morgen.jpg" alt="" />
             </div>
-            <div class="book-info">
+            <div class="book-info" data-rating="4">
               <h4>Bis zum hellsten Morgen</h4>
-              <p>
-                Das Buch handelt von der Suche nach einem neuen Anfang und der
-                Hoffnung auf bessere Zeiten. Die Charaktere reflektieren über
-                ihre Vergangenheit und streben danach, ihre Träume zu
-                verwirklichen, während sie gleichzeitig mit den Schatten ihrer
-                Erfahrungen umgehen.
-              </p>
               <p class="small">Brittainy Cherry</p>
             </div>
           </div>
@@ -490,16 +383,8 @@
                 alt=""
               />
             </div>
-            <div class="book-info">
+            <div class="book-info" data-rating="3.5">
               <h4>Denn ohne Musik werden wir ertrinken</h4>
-              <p>
-                Hazel Stone und der Protagonist konnten sich früher nicht
-                ausstehen, doch als sie verzweifelt vor seiner Tür steht,
-                erkennt er ihre wahre Schönheit und Mitgefühl. Sie inspiriert
-                ihn, seine Musik zurückzugewinnen und gemeinsam schreiben sie
-                Songs. Doch während seine Band kurz vor dem Durchbruch steht,
-                droht ihre Beziehung durch den Erfolg zu gefährden.
-              </p>
               <p class="small">Brittainy Cherry</p>
             </div>
           </div>
@@ -510,17 +395,8 @@
                 alt=""
               />
             </div>
-            <div class="book-info">
+            <div class="book-info" data-rating="4">
               <h4>Denn ohne Liebe werden wir zerbrechen</h4>
-              <p>
-                Die Protagonistin, eine Köchin, beginnt auf dem Luxusanwesen des
-                Rockstars Oliver Smith zu arbeiten, dessen Musik ihr in schweren
-                Zeiten Trost gespendet hat. Doch sie erkennt, dass Oliver nach
-                dem Tod seines Zwillingsbruders nicht nur seine Leidenschaft,
-                sondern auch sich selbst verloren hat. Entschlossen, ihm zu
-                helfen und seine innere Stärke wiederzuentdecken, riskiert sie
-                ihr eigenes Glück.
-              </p>
               <p class="small">Brittainy Cherry</p>
             </div>
           </div>
@@ -528,7 +404,7 @@
             <div class="book-cover">
               <img src="/images/buecher/was-wir-im-stille-fühlen.jpg" alt="" />
             </div>
-            <div class="book-info">
+            <div class="book-info" data-rating="4">
               <h4>Was wir im Stillen fühlen</h4>
               <p></p>
               <p class="small">Brittainy Cherry</p>
@@ -541,20 +417,8 @@
                 alt=""
               />
             </div>
-            <div class="book-info">
+            <div class="book-info" data-rating="4">
               <h4>Wenn deine Wärme meine Källte besiegt</h4>
-              <p>
-                Holly, die nach dem Verlassenwerden am Altar sehnlichst einen
-                neuen Freund für die Feiertage sucht, plant, bis Weihnachten
-                jemanden zu finden, den sie ihrer Familie vorstellen kann. Kai
-                Kane, der Besitzer des Restaurants, in dem Holly täglich datet,
-                kann ihr Elend nicht länger mitansehen und bietet ihr an, bei
-                der Suche nach Mister Right zu helfen – unter der Bedingung,
-                dass sie ihre Dates woanders verbringt. Doch während Holly
-                erfolgreich neue Bekanntschaften schließt, beginnt Kai zu
-                erkennen, dass er sich in sie verliebt hat und bereut seinen
-                ursprünglichen Plan.
-              </p>
               <p class="small">Brittainy Cherry</p>
             </div>
           </div>
@@ -565,18 +429,8 @@
                 alt=""
               />
             </div>
-            <div class="book-info">
+            <div class="book-info" data-rating="5">
               <h4>Wenn der Frost dein Herz berührt</h4>
-              <p>
-                An ihrem einundzwanzigsten Geburtstag wird Starlet Evans mit dem
-                Betrug ihres Freundes konfrontiert, was ihr Leben aus den Fugen
-                geraten lässt. Um zu vergessen, flieht sie auf eine Collegeparty
-                und trifft dort einen geheimnisvollen Fremden, der sie sofort
-                fasziniert. Sie beschließt, die Nacht ohne Verpflichtungen und
-                Namen zu genießen. Doch das Schicksal führt sie zurück in den
-                Alltag, als sie herausfindet, dass sie Milos neue
-                Nachhilfelehrerin ist – und die beiden sich wiedersehen müssen.
-              </p>
               <p class="small">Brittainy Cherry</p>
             </div>
           </div>
@@ -584,18 +438,8 @@
             <div class="book-cover">
               <img src="/images/buecher/Hold-me.jpg" alt="" />
             </div>
-            <div class="book-info">
+            <div class="book-info" data-rating="3.5">
               <h4>Hold me</h4>
-              <p>
-                Zoe erfüllt sich ihren Traum, an der New England School of
-                Ballet zu studieren, trifft dort jedoch auf Jase, den Jungen,
-                dem sie einst all ihre Wahrheiten anvertraute – bis sie den
-                Kontakt abbrach. Jase ist von ihrer plötzlichen Anwesenheit
-                genervt, da er mit seinen eigenen Problemen kämpft und nicht an
-                die Vergangenheit erinnert werden möchte. Als sie als
-                Tanzpartner zugeteilt werden, müssen sie sich ihrer gemeinsamen
-                Geschichte stellen und kommen sich dabei näher.
-              </p>
               <p class="small">Anna Savas</p>
             </div>
           </div>
@@ -603,17 +447,8 @@
             <div class="book-cover">
               <img src="/images/buecher/stay-here.jpg" alt="" />
             </div>
-            <div class="book-info">
+            <div class="book-info" data-rating="5">
               <h4>Stay here</h4>
-              <p>
-                Nach dem Tod ihrer Eltern zieht Rayne nach Boston, um an der New
-                England School of Ballet zu studieren und den Traum ihrer Mutter
-                zu verwirklichen. Dort trifft sie Easton, der sie wie niemand
-                sonst versteht. Obwohl sie sich in seine Musik und ihn verliebt,
-                kämpft sie gegen ihre Gefühle an, da sie sich auf ihren Tanz
-                konzentrieren möchte. Doch je mehr sie sich mit Easton
-                verbindet, desto mehr gerät ihre Welt ins Wanken.
-              </p>
               <p class="small">Anna Savas</p>
             </div>
           </div>
@@ -621,18 +456,8 @@
             <div class="book-cover">
               <img src="/images/buecher/shine-bright.jpg" alt="" />
             </div>
-            <div class="book-info">
+            <div class="book-info" data-rating="4">
               <h4>Shine bright</h4>
-              <p>
-                Lia Winslow führt ein scheinbar perfektes Leben als talentierte
-                Tänzerin an der New England School of Ballet, während sie ihre
-                wahren Träume hinter einer Fassade versteckt. Am ersten Tag
-                ihres Abschlussjahres trifft sie unerwartet auf Phoenix, ihren
-                Lehrer, mit dem sie zuvor eine unvergessliche Nacht verbracht
-                hat. Die beiden müssen ihre Gefühle geheim halten, da die
-                Wiederholung ihrer leidenschaftlichen Verbindung nicht nur Lias
-                Zukunft, sondern auch Phoenix' Karriere gefährden könnte
-              </p>
               <p class="small">Anna Savas</p>
             </div>
           </div>
@@ -640,18 +465,8 @@
             <div class="book-cover">
               <img src="/images/buecher/move-on.jpg" alt="" />
             </div>
-            <div class="book-info">
+            <div class="book-info" data-rating="3.5">
               <h4>Move on</h4>
-              <p>
-                Skye ist überrascht, als sie während der Dreharbeiten zu einer
-                Dokumentation über die New England School of Ballet plötzlich
-                Gabriel wiedertrifft – den Jungen, der ihr vor drei Jahren das
-                Herz gebrochen hat. Alte Erinnerungen kommen zurück, und obwohl
-                sie versucht, ihm aus dem Weg zu gehen, kann sie ihre Gefühle
-                nicht leugnen. Als ein Kuss zwischen ihnen alles ins Wanken
-                bringt, stehen sie vor der Herausforderung, ihre Vergangenheit
-                und die wiederauflebenden Emotionen zu bewältigen.
-              </p>
               <p class="small">Anna Savas</p>
             </div>
           </div>
@@ -661,27 +476,8 @@
             <div class="book-cover">
               <img src="/images/buecher/Mimik.jpg" alt="" />
             </div>
-            <div class="book-info">
+            <div class="book-info" data-rating="4">
               <h4>Mimik</h4>
-              <p>
-                Ein winziges Zucken im Mundwinkel, die kleinste Veränderung in
-                der Pupille reichen ihr, um das wahre Ich eines Menschen zu
-                „lesen“: Hannah Herbst ist Deutschlands erfahrenste
-                Mimikresonanz-Expertin, spezialisiert auf die geheimen Signale
-                des menschlichen Körpers. Als Beraterin der Polizei hat sie
-                schon etliche Gewaltverbrecher überführt. Doch ausgerechnet als
-                sie nach einer Operation mit den Folgen eines
-                Gedächtnisverlustes zu kämpfen hat, wird sie mit dem
-                schrecklichsten Fall ihrer Karriere konfrontiert: Eine bislang
-                völlig unbescholtene Frau hat gestanden, ihre Familie
-                bestialisch ermordet zu haben. Nur ihr kleiner Sohn Paul hat
-                überlebt. Nach ihrem Geständnis gelingt der Mutter die Flucht
-                aus dem Gefängnis. Ist sie auf der Suche nach ihrem Sohn, um
-                ihre „Todesmission“ zu vollenden? Hannah Herbst hat nur das
-                kurze Geständnis-Video, um die Mutter zu überführen und Paul zu
-                retten. Das Problem: Die Mörderin auf dem Video ist Hannah
-                selbst! Ihr einziger Ausweg führt tief in ihr Innerstes ...
-              </p>
               <p class="small">Sebastian Fitzek</p>
             </div>
           </div>
@@ -689,19 +485,8 @@
             <div class="book-cover">
               <img src="/images/buecher/Rachesommer.jpg" alt="" />
             </div>
-            <div class="book-info">
+            <div class="book-info" data-rating="5">
               <h4>Rachesommer</h4>
-              <p>
-                Wien. Vier wohlhabende Männer im besten Alter sterben innerhalb
-                kürzester Zeit unter ähnlichen Umständen. Und nur die Anwältin
-                Evelyn Meyers glaubt nicht an Zufall ... Leipzig. Mehrere
-                Jugendliche, allesamt Insassen psychiatrischer Kliniken, sollen
-                Selbstmord begangen haben. Kommissar Pulaskis Misstrauen ist
-                geweckt, er beginnt zu ermitteln. Seine Nachforschungen bringen
-                ihn mit Evelyn zusammen, und ihre gemeinsame Spur führt sie bis
-                zur Nordsee, zu einem Schiff, das ein schreckliches Geheimnis
-                birgt ...
-              </p>
               <p class="small">Andreas Gruber</p>
             </div>
           </div>
@@ -709,22 +494,8 @@
             <div class="book-cover">
               <img src="/images/buecher/Racheherbst.jpg" alt="" />
             </div>
-            <div class="book-info">
+            <div class="book-info" data-rating="4">
               <h4>Racheherbst</h4>
-              <p>
-                Unter einer Leipziger Brücke wird die verstümmelte Leiche einer
-                jungen Frau angespült. Walter Pulaski, zynischer Ermittler bei
-                der Polizei, merkt schnell, dass der Mord an der Prostituierten
-                Natalie bei seinen Kollegen nicht die höchste Priorität genießt.
-                Er recherchiert auf eigene Faust – an seiner Seite Natalies
-                Mutter Mikaela, die um jeden Preis den Tod ihrer Tochter rächen
-                will. Gemeinsam stoßen sie auf die blutige Fährte eines
-                Serienmörders, die sich über Prag und Passau bis nach Wien
-                zieht. Dort hat die junge Anwältin Evelyn Meyers gerade ihren
-                ersten eigenen Fall als Strafverteidigerin übernommen. Es geht
-                um einen brutalen Frauenmord – und eine fatale Fehleinschätzung
-                lässt Evelyn um ein Haar selbst zum nächsten Opfer werden ...
-              </p>
               <p class="small">Andreas Gruber</p>
             </div>
           </div>
@@ -732,22 +503,8 @@
             <div class="book-cover">
               <img src="/images/buecher/später.jpg" alt="" />
             </div>
-            <div class="book-info">
+            <div class="book-info" data-rating="3">
               <h4>Später</h4>
-              <p>
-                Jamie Conklin wächst in Manhattan auf und wirkt wie ein normaler
-                neunjähriger Junge. Seinen Vater hat er nie kennengelernt, aber
-                er steht seiner Mutter Tia, einer Literaturagentin, sehr nahe.
-                Die beiden haben ein Geheimnis: Jamie kann von klein auf die
-                Geister kürzlich Verstorbener sehen und sogar mit ihnen reden.
-                Und sie müssen alle seine Fragen wahrheitsgemäß beantworten. Tia
-                hat sich gerade aus großer finanzieller Not gekämpft, da stirbt
-                ihr lukrativster Autor. Der langersehnte Abschlussband seiner
-                großen Bestsellersaga bleibt leider unvollendet – wäre da nicht
-                Jamies Gabe … Die beiden treten eine Reihe von unabsehbaren
-                Ereignissen los, und schließlich geht es um, nun ja, Leben und
-                Tod.
-              </p>
               <p class="small">Stephen King</p>
             </div>
           </div>
@@ -756,21 +513,8 @@
             <div class="book-cover">
               <img src="/images/buecher/atomic-habits.jpg" alt="" />
             </div>
-            <div class="book-info">
+            <div class="book-info" data-rating="5">
               <h4>Die 1% Methode</h4>
-              <p>
-                Das Geheimnis des Erfolgs: »Die 1%-Methode«. Sie liefert das
-                nötige Handwerkszeug, mit dem Sie jedes Ziel erreichen. James
-                Clear, erfolgreicher Coach und einer der führenden Experten für
-                Gewohnheitsbildung, zeigt praktische Strategien, mit denen Sie
-                jeden Tag etwas besser werden bei dem, was Sie sich vornehmen.
-                Seine Methode greift auf Erkenntnisse aus Biologie, Psychologie
-                und Neurowissenschaften zurück und funktioniert in allen
-                Lebensbereichen. Ganz egal, was Sie erreichen möchten – ob
-                sportliche Höchstleistungen, berufliche Meilensteine oder
-                persönliche Ziele wie mit dem Rauchen aufzuhören –, mit diesem
-                Buch schaffen Sie es ganz sicher.
-              </p>
               <p class="small">James Clear</p>
             </div>
           </div>
@@ -778,20 +522,8 @@
             <div class="book-cover">
               <img src="/images/buecher/feel-good-productivty.jpg" alt="" />
             </div>
-            <div class="book-info">
+            <div class="book-info" data-rating="5">
               <h4>Feel Good Productivity</h4>
-              <p>
-                Du versinkst in Arbeit, trotzdem ist Prokrastination dein
-                ständiger Begleiter? Du fühlst dich ausgelaugt und ohne Fokus?
-                Du möchtest dein Stresslevel senken, mehr Zeit für Freunde und
-                Familie haben und trotzdem erfolgreich sein? Dann wird Ali
-                Abdaals Feel-Good-Methode dein Leben verändern. Der Experte für
-                Produktivität zeigt eindrucksvoll und wissenschaftlich fundiert,
-                dass der Erfolg sich vor allem dann einstellt, wenn wir uns gut
-                fühlen und das Beste daran ist: Plötzlich haben wir mehr Zeit
-                und Energie für die Dinge, die uns wirklich erfüllen, anstatt
-                gehetzt ins Burnout zu rennen.
-              </p>
               <p class="small">Ali Abdaal</p>
             </div>
           </div>
@@ -799,21 +531,8 @@
             <div class="book-cover">
               <img src="/images/buecher/good-vibes.jpg" alt="" />
             </div>
-            <div class="book-info">
+            <div class="book-info" data-rating="4.5">
               <h4>Good Vibes, Good Life</h4>
-              <p>
-                Vex King, ein Instagram-Star, beantwortet zentrale Fragen zur
-                Selbstliebe, dem Umgang mit negativen Emotionen und der Suche
-                nach dauerhaftem Glück. Er teilt seine persönlichen Erfahrungen
-                und inspiriert Hunderttausende dazu, sich in Selbstliebe zu
-                üben, toxische Energien zu überwinden und den Fokus auf ihr
-                inneres Wohlbefinden zu richten. Zudem ermutigt er dazu,
-                positive Lebensgewohnheiten wie Achtsamkeit und Meditation zu
-                pflegen, limitierende Überzeugungen abzulegen, Ziele zu
-                manifestieren, Ängste zu überwinden und ein höheres Lebensziel
-                zu finden, um das eigene Leben und das anderer nachhaltig zu
-                verbessern.
-              </p>
               <p class="small">Vex King</p>
             </div>
           </div>
@@ -821,26 +540,8 @@
             <div class="book-cover">
               <img src="/images/buecher/the-mountain-is-you.jpg" alt="" />
             </div>
-            <div class="book-info">
+            <div class="book-info" data-rating="3.5">
               <h4>The mountain is you</h4>
-              <p>
-                Du willst etwas in deinem Leben verändern und fällst doch immer
-                wieder in alte Verhaltensmuster zurück? Du machst dir ständig
-                Sorgen, obwohl es dir gut geht und du dich über so vieles freuen
-                könntest? Du Du hast Ängste, die dich daran hindern, neue Wege
-                einzuschlagen? Menschen tun oft Dinge, die sie eigentlich gar
-                nicht tun wollen – und sabotieren sich so selbst. Doch was genau
-                ist eigentlich Selbstsabotage? Wie kommt sie zustande? Und warum
-                hören wir nicht einfach auf damit, uns selbst im Weg zu stehen?
-                Einfühlsam, aber mit Nachdruck, zeigt Bestsellerautorin Brianna
-                Wiest anhand von alltäglichen Beispielen, wie selbstsabotierende
-                Verhaltensweisen aussehen können, und erklärt, wie wir unsere
-                eigenen Blockaden lösen und unsere schädlichen Verhaltensweisen
-                überwinden können. Anhand ihrer psychologischen und
-                philosophischen Erkenntnisse können wir lernen, wie unser
-                bestmögliches zukünftiges Selbst zu handeln, und so unser
-                Potenzial voll ausschöpfen.
-              </p>
               <p class="small">Biranna Wiest</p>
             </div>
           </div>
