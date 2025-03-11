@@ -1,0 +1,172 @@
+.education {
+    margin-block: 7rem;
+    h2 {
+        margin-bottom: 1.5rem;
+    }
+
+
+    
+    .grid {
+        margin-left: 2rem;
+    }
+    .abschnitt {
+        display: flex;
+        margin-block: 2rem;
+        gap: 1rem; 
+    }
+
+    h3 {
+        font-size: 4rem;
+        opacity: 0.6;
+    }
+}
+
+@media screen and (min-width: 640px) {
+    .education {
+
+        .grid{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            justify-items: center;
+            margin-left: 0;
+        }
+
+        .abschnitt:last-child{
+            grid-column: 1 / 3;
+        }
+    }
+    
+}
+
+@media screen and (min-width: 1024px) {
+    .education {
+
+        .grid{ 
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr;
+        }
+        .abschnitt:last-child{
+            grid-column: 3 /4 ;
+        }
+    }
+}
+
+
+.skills {
+
+    margin-bottom: 5rem;
+    h2 {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    .skill {
+        border-block: 1px solid var(--font-dark);
+        padding-block: 1.5rem 2rem;
+
+    }
+
+    .skill-heading {
+        font-weight: 500;
+        margin-bottom: 1rem;;
+        
+    }      
+        
+    
+}
+
+@media screen and (min-width: 640px) {
+    .skills {
+    
+        .skill {
+            display: flex;
+            align-items: center;
+            }
+
+        .skill-heading {
+            width: 40%;
+            padding-left: 1.5rem;
+            margin-bottom: 0;
+        }
+
+        .skill-text {
+            width:fit-content;
+            
+        }
+    }
+}
+
+.projects {
+    position: relative;
+  h2 {
+    margin-bottom: 2rem;
+  }  
+
+  img {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  .project {
+    margin-bottom: 8rem;
+
+  }
+
+  .project_heading {
+    margin-bottom: 1rem;
+    font-weight: 500;
+  }
+
+  .project_description {
+    margin-bottom: 1rem;
+  }
+
+  .technologies {
+    display: flex;
+    margin-bottom: 1rem;
+    list-style-position: inside;  
+    gap: 1rem;
+    padding: 0;
+
+    
+  }
+
+  .technologies > li {
+    list-style-type: disc;
+  }
+  a {
+   
+    border: 1px solid var(--font-dark);
+    border-radius:20px;
+    padding: 5px 20px;
+  }
+
+
+}
+
+
+@media screen and (min-width: 640px) {
+    .projects {
+        .project {
+            display: flex;
+            gap: 1.5rem;
+            
+        }
+
+        img {
+            width: 45%;
+            height: fit-content;
+            align-self: center;
+        }
+    }
+    
+}
+
+@media screen and (min-width: 1024px) {
+    .projects {
+        .project:nth-child(3) {
+           flex-direction:row-reverse;
+        }
+        
+    }
+}

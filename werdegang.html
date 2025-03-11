@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mein Werdegang</title>
+    <link rel="stylesheet" href="global.css" />
+    <link rel="stylesheet" href="werdegang.css" />
   </head>
   <body>
     <header>
@@ -11,16 +13,16 @@
         <div class="logo">
           <img />
         </div>
-        <ul>
-          <li><a href="/index.html">Startseite</a></li>
-          <li><a href="/über-mich.html">Über mich</a></li>
-          <li><a href="/werdegang.html">Werdegang</a></li>
-          <li><a href="/buchfavoriten.html">Buchfavoriten</a></li>
+        <ul class="nav-links">
+          <li><a href="./index.html">Startseite</a></li>
+          <li><a href="./über-mich.html">Über mich</a></li>
+          <li><a href="./werdegang.html">Werdegang</a></li>
+          <li><a href="./buchfavoriten.html">Buchfavoriten</a></li>
         </ul>
         <!--Toggle Button (Light & Dark Theme)-->
-        <label class="toggle-button">
+        <label class="switch mobile-hidden">
           <input type="checkbox" />
-          <span class="slider round"></span>
+          <span class="slider"></span>
         </label>
       </nav>
 
@@ -34,36 +36,42 @@
       <section class="education">
         <h2>meine <i>Bildungsweg</i></h2>
         <div class="grid">
-          <div>
-            <h3>01</h3>
-            <p class="bold">Realschulabschluss</p>
-            <p>Johannes-Kepler-Realschule</p>
-            <p>Zweig: Wirtschaft</p>
-            <p class="small">2014-2020</p>
+          <div class="abschnitt">
+            <h3><i>01</i></h3>
+            <div class="details">
+              <p class="bold">Realschulabschluss</p>
+              <p>Johannes-Kepler-Realschule</p>
+              <p>Zweig: Wirtschaft</p>
+              <p class="small">2014-2020</p>
+            </div>
           </div>
-          <div>
-            <h3>02</h3>
-            <p class="bold">Fachabitur</p>
-            <p>Fachoberschule Bayreuth</p>
-            <p>Bildungsrichtung: Wirtschaft</p>
-            <p class="small">2020-2022</p>
+          <div class="abschnitt">
+            <h3><i>02</i></h3>
+            <div class="details">
+              <p class="bold">Fachabitur</p>
+              <p>Fachoberschule Bayreuth</p>
+              <p>Bildungsrichtung: Wirtschaft</p>
+              <p class="small">2020-2022</p>
+            </div>
           </div>
-          <div>
-            <h3>03</h3>
-            <p class="bold">Bachelor of Science</p>
-            <p>IU Internationale Hochschule</p>
-            <p>Fernstudoum Informatik</p>
-            <p class="small">2022-2025</p>
+          <div class="abschnitt">
+            <h3><i>03</i></h3>
+            <div class="details">
+              <p class="bold">Bachelor of Science</p>
+              <p>IU Internationale Hochschule</p>
+              <p>Fernstudium Informatik</p>
+              <p class="small">2022-2025</p>
+            </div>
           </div>
         </div>
       </section>
 
       <section class="skills">
-        <h2>Skills</h2>
+        <h2 class="h2-serif">Skills</h2>
 
         <div class="skill">
-          <h4>HTML & CSS</h4>
-          <p>
+          <h4 class="skill-heading">HTML & CSS</h4>
+          <p class="skill-text">
             Ich habe ein sehr gutes Verständnis von HTML und CSS und kann
             strukturierte, benutzerfreundliche Webseiten erstellen. Zusätzlich
             beherrsche ich Layout-Techniken wie Flexbox und Grid, um
@@ -71,8 +79,8 @@
           </p>
         </div>
         <div class="skill">
-          <h4>Javascript</h4>
-          <p>
+          <h4 class="skill-heading">Javascript</h4>
+          <p class="skill-text">
             Ich habe ein gutes Verständnis von JavaScript und kann interaktive
             Elemente in Webseiten integrieren. Ich bin mit den grundlegenden
             Konzepten vertraut und arbeite daran, meine Fähigkeiten in der
@@ -81,8 +89,8 @@
           </p>
         </div>
         <div class="skill">
-          <h4>React</h4>
-          <p>
+          <h4 class="skill-heading">React</h4>
+          <p class="skill-text">
             Ich habe ein sehr gutes Verständnis von React und kann komplexe,
             interaktive Benutzeroberflächen entwickeln. Ich bin vertraut mit der
             Erstellung von Komponenten, dem State-Management und der Verwendung
@@ -90,8 +98,8 @@
           </p>
         </div>
         <div class="skill">
-          <h4>Java</h4>
-          <p>
+          <h4 class="skill-heading">Java</h4>
+          <p class="skill-text">
             Meine Kenntnisse in Java sind grundlegend. Ich habe ein gutes
             Verständnis der objektorientierten Programmierung und arbeite daran,
             meine Fähigkeiten in dieser Sprache weiterzuentwickeln.
@@ -100,35 +108,37 @@
       </section>
 
       <section class="projects">
-        <h2>Meine <i>Projekte</i></h2>
+        <h2>Meine <i class="h2-serif">Projekte</i></h2>
         <div class="project">
+          <img src="./images/project1.png" alt="" />
           <div class="project_info">
-            <h3>
+            <h3 class="project_heading">
               Transparenz für den Klimawandel: CO₂-Emissionsdaten für eine
               nachhaltige Zukunft
             </h3>
-            <p>
+            <p class="project_description">
               Ziel der Website ist es, eine benutzerfreundlihc Plattform zu
               schaffen, die transparent Information über die jährlichen
               CO₂-Emissionen von Unternehmen und Ländern bereitstellt.
             </p>
-            <div class="technology">
-              <p>HTML</p>
-              <p>React</p>
-              <p>SASS</p>
-            </div>
+            <ul class="technologies">
+              <li>HTML</li>
+              <li>React</li>
+              <li>SASS</li>
+            </ul>
             <a href="https://github.com/zrjasmin/co2-emissionen"
               >zum Github Projekt</a
             >
           </div>
         </div>
         <div class="project">
+          <img src="./images/project2.png" alt="" />
           <div class="project_info">
-            <h3>
+            <h3 class="project_heading">
               Require4Testing: Web-App zur Organisation manueller Anwendertests
               (in Bearbeitung)
             </h3>
-            <p>
+            <p class="project_description">
               Die Web-App „Require4Testing“ wird entwickelt, um den Prozess der
               manuellen Anwendertests zu optimieren. Sie ermöglicht
               Testverantwortlichen die einfache Planung, Erstellung und
@@ -136,11 +146,11 @@
               Erstellen von Testplänen, das Zuweisen von Testern und das
               Verfolgen von Testergebnissen.
             </p>
-            <div class="technologies">
-              <p>Java</p>
-              <p>JSF</p>
-              <p>MySQL</p>
-            </div>
+            <ul class="technologies">
+              <li>Java</li>
+              <li>JSF</li>
+              <li>MySQL</li>
+            </ul>
             <a href="https://github.com/zrjasmin/WebappTesting/tree/main/Webapp"
               >zum Github Projekt</a
             >
