@@ -349,3 +349,58 @@ header > button > img {
    
 
 }
+
+footer {
+    background-color: var(--card--dark);
+    padding: 2rem;
+
+    ul {
+        padding-left: 0;
+        margin: 0;
+        
+    }
+
+    li {
+        list-style-type: none;
+        margin-bottom: 1rem
+        
+    }
+
+    .contact-li {
+
+        display: flex;
+    
+         img {
+            margin-right: 1rem;
+         }
+
+    }
+
+    .contact-li:nth-child(6) {
+        margin-top: 2rem;
+
+    }
+}
+
+@media screen and (min-width: 640px) {
+    footer {
+        padding: 3rem;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    footer {
+        
+
+        ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin-inline: auto;
+        width: 80%;
+        
+    }
+        
+    }
+
+    
+}
