@@ -1,0 +1,209 @@
+.vorstellung {
+    margin-block: 5rem;
+    figure {
+        margin: 0;
+        padding: 0;
+    }
+
+    .images-container {
+        margin: 1rem auto;
+        width: fit-content;
+       
+    }
+    .image1 {
+        border-radius: 15px;
+        width: 15rem;
+        position: absolute;
+        filter: grayscale();
+        margin-inline:  auto;
+    }
+
+    .image2 {
+        border-radius: 15px;
+        transform: rotate(10deg);
+        margin-top: 7.5rem;
+        margin-left: 8.125rem;
+       width: 12rem;
+    
+    }
+
+    .text-container {}
+
+    h2 {
+       margin-bottom: 1rem; 
+    }
+}
+
+@media screen and (min-width: 640px) {
+    .vorstellung {
+        display: flex;
+        justify-content: center;
+        gap: 2.5rem;
+
+        .image1 {
+            
+            width: 17rem;
+           
+        }
+
+        .image2 {
+            margin-left: 7rem;
+            width: 12rem;
+        }
+
+        .text-container {
+            align-self: center;
+            width: 60%;
+            max-width:34.375rem; 
+        }
+    }
+    
+}
+
+
+.hobbies {
+    .hobbies-heading {
+        margin-bottom: 2rem;
+    }
+
+    .card {
+        background-color: var(--card--dark);
+        border-radius: 20px;
+        padding: 2rem 1.5rem 3rem 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+    h3 {
+        margin-bottom: 1rem;
+    }
+
+    p {
+        margin-bottom: 2rem;
+    }
+
+    a {
+        border: 1px solid var(--font-dark);
+        border-radius:20px;
+        padding: 5px 20px;
+        
+    }
+    .desktop {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 768px) {
+ .hobbies {
+   
+    
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+    }
+
+    .card {
+        padding: 2.5rem 2rem;
+        margin: 0;
+    }
+
+ }
+
+}
+
+@media screen and (min-width: 1024px) {
+    .hobbies {
+        .grid {
+            grid-template-columns: 1fr 1fr 150px;
+            grid-template-rows: 1fr 1fr;
+            
+        }
+        .card {
+            grid-row: 1/3;
+            
+        }
+
+        .desktop {
+            display: block;
+            border-radius:20px;
+            width: 150px;
+            height: 100%;
+            max-height:259px;
+           
+            object-fit: cover;
+        }
+    }
+}
+
+.gallery {
+
+    h2 {
+
+    }
+
+    .slideshow-container {
+        position: relative;
+        margin: 1.5rem auto;
+
+    }
+
+    figure {
+        width: fit-content;
+        margin: 0 auto;  
+    }
+
+    .slide {
+        width: 225px;
+        display: none;
+        
+    }
+    .active {
+        display: block;
+    }
+
+   
+
+    button {
+        background: none;
+        border: 1px solid var(--font-dark);
+        border-radius: 50px;
+        padding: 5px 12px;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        margin-top: -22px;
+    }
+
+    .arrow {
+        margin-top: 5px;
+        width: 1.25rem;
+       
+    }
+
+    .previous {
+        transform: rotate(180deg);
+    }
+
+    .next {
+       right: 0;
+    }
+
+    
+}
+
+@media screen and (min-width: 640px) {
+
+    .slideshow-container {
+        display: grid;
+    }
+    .gallery {
+        .slide {
+            display: block;
+        }
+
+        button {
+            display: none;
+        }
+    }
+    
+}

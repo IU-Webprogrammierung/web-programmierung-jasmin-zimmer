@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Über mich</title>
     <link rel="stylesheet" href="global.css" />
+    <link rel="stylesheet" href="über-mich.css" />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script defer src="./components.js"></script>
   </head>
@@ -18,94 +19,120 @@
             <img
               src="/images/me2.jpg"
               alt="Ein Bild von mir im Spiegel"
-              style="width: 200px"
+              class="image1"
             />
           </figure>
           <figure>
-            <img src="/images/me.jpg" alt="Bild von mir" style="width: 200px" />
+            <img src="/images/me.jpg" alt="Bild von mir" class="image2" />
           </figure>
         </div>
         <div class="text-container">
-          <h2></h2>
-          <p></p>
+          <h2>Header</h2>
+          <p>
+            lor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+            tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
+            voluptua. At vero eos et accusam et justo duo dolores et
+          </p>
         </div>
       </section>
 
       <section class="hobbies">
-        <h2>Meine Hobbys</h2>
-        <div class="card">
-          <h3>Programmieren</h3>
-          <p>
-            Mein Hobby: Programmieren Programmieren ist für mich mehr als nur
-            ein technisches Handwerk – es ist eine kreative Ausdrucksform, die
-            es mir ermöglicht, Ideen in die digitale Realität umzusetzen. Ob ich
-            an eigenen Projekten arbeite oder neue Technologien erkunde, das
-            Lösen von Problemen und das Entwickeln innovativer Lösungen bereitet
-            mir große Freude. Die Welt der Programmierung ist dynamisch und
-            ständig im Wandel, was mich motiviert, kontinuierlich zu lernen und
-            meine Fähigkeiten zu erweitern.
-          </p>
-          <a href="/werdegang.html">zu meinen Projekten</a>
-        </div>
-        <div class="card">
-          <h3>Lesen</h3>
-          <p>
-            Lesen ist für mich nicht nur ein Zeitvertreib, sondern eine
-            Leidenschaft, die mir die Möglichkeit gibt, in neue Welten
-            einzutauchen und verschiedene Perspektiven zu entdecken. Ob
-            spannende Romane, fesselnde Sachbücher oder inspirierende Biografien
-            – jedes Buch eröffnet mir neue Horizonte und bereichert mein Leben
-            auf vielfältige Weise. Ich liebe es, mich von Geschichten mitreißen
-            zu lassen und durch das geschriebene Wort zu lernen und zu wachsen.
-          </p>
-          <a href="/buchfavoriten.html">zu meinen Buchfavoriten</a>
+        <h2 class="hobbies-heading">Meine <i class="h2-serif">Hobbys</i></h2>
+        <div class="grid">
+          <div class="card">
+            <h3>Programmieren</h3>
+            <p>
+              Mein Hobby: Programmieren Programmieren ist für mich mehr als nur
+              ein technisches Handwerk – es ist eine kreative Ausdrucksform, die
+              es mir ermöglicht, Ideen in die digitale Realität umzusetzen. Ob
+              ich an eigenen Projekten arbeite oder neue Technologien erkunde,
+              das Lösen von Problemen und das Entwickeln innovativer Lösungen
+              bereitet mir große Freude. Die Welt der Programmierung ist
+              dynamisch und ständig im Wandel, was mich motiviert,
+              kontinuierlich zu lernen und meine Fähigkeiten zu erweitern.
+            </p>
+            <a href="/werdegang.html">zu meinem Werdegang</a>
+          </div>
+          <div class="card">
+            <h3>Lesen</h3>
+            <p>
+              Lesen ist für mich nicht nur ein Zeitvertreib, sondern eine
+              Leidenschaft, die mir die Möglichkeit gibt, in neue Welten
+              einzutauchen und verschiedene Perspektiven zu entdecken. Ob
+              spannende Romane, fesselnde Sachbücher oder inspirierende
+              Biografien – jedes Buch eröffnet mir neue Horizonte und bereichert
+              mein Leben auf vielfältige Weise. Ich liebe es, mich von
+              Geschichten mitreißen zu lassen und durch das geschriebene Wort zu
+              lernen und zu wachsen.
+            </p>
+            <a href="/buchfavoriten.html">zu meinen Buchfavoriten</a>
+          </div>
+          <img src="./images/hero-darkm.jpg" class="desktop" />
+          <img src="./images/contact-darkm.jpg" class="desktop" />
         </div>
       </section>
 
-      <section>
+      <section class="gallery">
         <h2>Images of my life</h2>
-        <figure>
-          <img
-            src="/images/gallery1.jpg"
-            alt="Bild von einem Auto im Porsche Museum"
-            style="width: 200px"
-          />
-        </figure>
-        <figure>
-          <img
-            src="/images/gallery2.jpg"
-            alt="Bild von zwei Cocktails"
-            style="width: 200px"
-          />
-        </figure>
-        <figure>
-          <img
-            src="/images/gallery3.jpg"
-            alt="Bild von meine Schreibtisch"
-            style="width: 200px"
-          />
-        </figure>
-        <figure>
-          <img
-            src="/images/gallery4.jpg"
-            alt="Bild von einer schwarz weißen Katze"
-            style="width: 200px"
-          />
-        </figure>
-        <figure>
-          <img
-            src="/images/gallery5.jpg"
-            alt="Bild von Kaffe und Kuchen"
-            style="width: 200px"
-          />
-        </figure>
-        <figure>
-          <img
-            src="/images/gallery6.jpg"
-            alt="Bild von einen Mann, der eine weiß rote Katze im Arm hält"
-            style="width: 200px"
-          />
-        </figure>
+        <div class="slideshow-container">
+          <figure>
+            <img
+              class="slide"
+              src="/images/gallery1.jpg"
+              alt="Bild von einem Auto im Porsche Museum"
+            />
+          </figure>
+          <figure>
+            <img
+              class="slide"
+              src="/images/gallery2.jpg"
+              alt="Bild von zwei Cocktails"
+            />
+          </figure>
+          <figure>
+            <img
+              class="slide"
+              src="/images/gallery3.jpg"
+              alt="Bild von meine Schreibtisch"
+            />
+          </figure>
+          <figure>
+            <img
+              class="slide"
+              src="/images/gallery4.jpg"
+              alt="Bild von einer schwarz weißen Katze"
+            />
+          </figure>
+          <figure>
+            <img
+              class="slide"
+              src="/images/gallery5.jpg"
+              alt="Bild von Kaffe und Kuchen"
+            />
+          </figure>
+          <figure>
+            <img
+              class="slide"
+              src="/images/gallery6.jpg"
+              alt="Bild von einen Mann, der eine weiß rote Katze im Arm hält"
+            />
+          </figure>
+
+          <button class="prev" onclick="navigate(-1)">
+            <img
+              class="arrow previous"
+              src="./images/icon-arrow-right-darkm.png"
+              alt=""
+            />
+          </button>
+          <button class="next" onclick="navigate(1)">
+            <img
+              class="arrow"
+              src="./images/icon-arrow-right-darkm.png"
+              alt=""
+            />
+          </button>
+        </div>
       </section>
     </main>
 

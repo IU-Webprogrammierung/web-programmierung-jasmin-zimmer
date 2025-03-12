@@ -20,3 +20,36 @@ $(document).ready(function () {
     }
   });
 });
+
+let slides = document.getElementsByClassName("slide");
+let index = 1;
+//Startslide
+showSlide(index);
+
+function showSlide(n) {
+  let currentSlide = slides[index - 1];
+
+  //rückwärts bewegen, wenn index kleiner als Start ist
+  if (index <= 0) {
+    index = slides.length;
+    currentSlide = slides[index - 1];
+  }
+
+  //von vorn anfang, nach einem kompletten Durchlauf
+  if (index > slides.length) {
+    index = 1;
+    currentSlide = slides[index + 1];
+  }
+
+  for (i = 0; i < slides.length; i++) {
+    if (slides[i] != currentSlide) {
+      slides[i].style.display = "none";
+    }
+  }
+  currentSlide.style.display = "block";
+}
+
+function navigate(n) {
+  index = index + n;
+  showSlide(index);
+}
