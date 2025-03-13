@@ -21,12 +21,12 @@ $(document).ready(function () {
   });
 });
 
-let slides = document.getElementsByClassName("slide");
+let slides = document.querySelectorAll(".slide");
 let index = 1;
 //Startslide
 showSlide(index);
 
-function showSlide(n) {
+function showSlide() {
   let currentSlide = slides[index - 1];
 
   //rückwärts bewegen, wenn index kleiner als Start ist
@@ -53,3 +53,23 @@ function navigate(n) {
   index = index + n;
   showSlide(index);
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+  const sliderContainer = document.querySelector(".slideshow-container");
+
+  console.log("fenstergröße");
+  function checkWindowSize() {
+    if (window.innerWidth >= 640) {
+      sliderContainer.classList.add("grid");
+      slides.forEach((slide) => {
+        slide.style.display = "block";
+      });
+    } else {
+      sliderContainer.classList.add("carousel");
+      showSlide(index);
+    }
+  }
+
+  checkWindowSize();
+  window.addEventListener("resize", checkWindowSize);
+});
