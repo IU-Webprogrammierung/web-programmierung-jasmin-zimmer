@@ -5,6 +5,7 @@ $(document).ready(function () {
 $(document).ready(function () {
   $("#header").load("./components/header.html", function () {
     let aktuelleSeite = window.location.pathname.split("/").pop();
+
     console.log(aktuelleSeite);
 
     switch (aktuelleSeite) {
@@ -18,7 +19,20 @@ $(document).ready(function () {
         $(".header-heading").text("Über mich");
         break;
     }
+
+    $("#hamburger-menu").on("click", function () {
+      $(".nav").toggleClass("active");
+      console.log("Hamburger-Menü geklickt!");
+    });
   });
+});
+
+//Mobiles Menu
+const mobileMenu = document.getElementById("hamburger-menu");
+const nav = document.querySelector("nav");
+
+mobileMenu.addEventListener("click", () => {
+  nav.classList.toggle("active");
 });
 
 let slides = document.querySelectorAll(".slide");
