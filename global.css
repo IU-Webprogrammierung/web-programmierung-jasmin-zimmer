@@ -20,7 +20,7 @@ html {
 body {
     margin: 0;
     background-color: var(--bg--dark);
-    background-image: url(/images/dark-bg.png);
+    background-image: url(./images/dark-bg.png);
 }
 
 *,
@@ -314,7 +314,7 @@ nav {
 
 header {
     position: relative;
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("/images/hero-darkm.jpg") center center;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("./images/hero-darkm.jpg") center center;
     
     background-size:cover; 
     margin: 1rem;
