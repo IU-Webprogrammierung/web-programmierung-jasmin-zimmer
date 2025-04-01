@@ -55,8 +55,6 @@ document.addEventListener("DOMContentLoaded", () => {
         buchcontainer.style.filter = "blur(3px)";
       });
     });
-  } else {
-    console.error("Das Element 'buchcontainer' wurde nicht gefunden.");
   }
 });
 
@@ -138,30 +136,44 @@ function navigate(n) {
 document.addEventListener("DOMContentLoaded", () => {
   const sliderContainer = document.querySelector(".slideshow-container");
 
-  console.log("fenstergröße");
-  function checkWindowSize() {
-    if (window.innerWidth >= 640) {
-      sliderContainer.classList.add("grid");
-      slides.forEach((slide) => {
-        slide.style.display = "block";
-      });
-    } else {
-      sliderContainer.classList.add("carousel");
-      showSlide(index);
+  if (sliderContainer) {
+    function checkWindowSize() {
+      if (window.innerWidth >= 640) {
+        sliderContainer.classList.add("grid");
+        slides.forEach((slide) => {
+          slide.style.display = "block";
+        });
+      } else {
+        sliderContainer.classList.add("carousel");
+        showSlide(index);
+      }
     }
-  }
 
-  checkWindowSize();
-  window.addEventListener("resize", checkWindowSize);
+    checkWindowSize();
+    window.addEventListener("resize", checkWindowSize);
+  }
 });
 
-//Klappentext overlay
-
+//Buchfilterung
 document.addEventListener("DOMContentLoaded", () => {
-  const buchcontainer = document.querySelector(".book-cover");
-
-  buchcontainer.addEventListener("click", (event) => {
-    const currentTarget = event.currentTarget.tagName;
-    console.log("click");
+  document.querySelectorAll(".book-filter").forEach((button) => {
+    button.addEventListener("click", function () {
+      //ausgewählte Kategorie
+      const category = this.getAttribute("book-categorie");
+      filterBooks(category);
+    });
   });
 });
+
+function filterBooks(category) {
+  const books = document.querySelectorAll(".card");
+
+  books.forEach((book) => {
+    //blendet Bücher ein oder aus
+    if (category === "all" || book.classList.contains(category)) {
+      book.style.display = "block";
+    } else {
+      book.style.display = "none";
+    }
+  });
+}
