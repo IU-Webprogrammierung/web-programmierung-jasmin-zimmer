@@ -26,7 +26,7 @@ header > button {
     display: flex;
     justify-content: center;
     background: none;
-    border: 1px solid var(--font-dark);
+    border: 1px solid var(--font);
     border-radius: 100%;
     width: 2.5rem;
     height: 2.5rem;
@@ -130,7 +130,7 @@ header > button > img {
     & .professionell, .personal {
         display: flex;
         align-items: center;
-        border-block: 1px solid var(--font-dark);
+        border-block: 1px solid var(--font);
         padding: 1rem;
         
     }
@@ -191,7 +191,7 @@ header > button > img {
 
 /*Kontakt Section*/
 .contact {
-    background-color: var(--card--dark);
+    background-color: var(--card);
     border-radius: 20px;
     padding: 1.5rem 1rem;
     margin-bottom: 5rem;

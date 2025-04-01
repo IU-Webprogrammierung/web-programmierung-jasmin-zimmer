@@ -22,15 +22,15 @@
 
     
     button {
-        background-color: var(--bg--dark);
+        background-color: var(--bg);
         padding: 0.3rem 0.8rem;
         margin-bottom: 1rem;
-        border: 1px solid var(--font-dark);
+        border: 1px solid var(--font);
         border-radius: 20px;
     }
 
     .divider {
-        border: 1px solid var(--font-dark);
+        border: 1px solid var(--font);
         margin-block: 1rem 2rem;
     }
 
@@ -67,7 +67,7 @@
         display: flex;
         gap: 1rem;
         padding: 1.5rem;
-        border: 1px solid var(--font-dark);
+        border: 1px solid var(--font);
         margin-bottom: 1.5rem;
     }
 
@@ -93,7 +93,7 @@
            
         }
         .star {
-            color: var(--font-dark);
+            color: var(--font);
             font-size: 1.4rem;
         }
     }

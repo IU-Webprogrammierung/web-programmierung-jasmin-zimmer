@@ -67,7 +67,7 @@
     }
 
     .card {
-        background-color: var(--card--dark);
+        background-color: var(--card);
         border-radius: 20px;
         padding: 2rem 1.5rem 3rem 1.5rem;
         margin-bottom: 2rem;
@@ -82,7 +82,7 @@
     }
 
     a {
-        border: 1px solid var(--font-dark);
+        border: 1px solid var(--font);
         border-radius:20px;
         padding: 5px 20px;
         
@@ -160,7 +160,7 @@
     
     button {
         background: none;
-        border: 1px solid var(--font-dark);
+        border: 1px solid var(--font);
         border-radius: 50px;
         padding: 5px 12px;
         position: absolute;

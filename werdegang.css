@@ -62,7 +62,7 @@
     }
 
     .skill {
-        border-block: 1px solid var(--font-dark);
+        border-block: 1px solid var(--font);
         padding-block: 1.5rem 2rem;
 
     }
@@ -136,7 +136,7 @@
   }
   a {
    
-    border: 1px solid var(--font-dark);
+    border: 1px solid var(--font);
     border-radius:20px;
     padding: 5px 20px;
   }

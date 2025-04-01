@@ -93,13 +93,15 @@ $(document).ready(function () {
 });
 
 //Mobiles Menu
-/*const mobileMenu = document.getElementById("hamburger-menu");
+const mobileMenu = document.getElementById("hamburger-menu");
 const nav = document.querySelector("nav");
 
-mobileMenu.addEventListener("click", () => {
-  nav.classList.toggle("active");
-});
-*/
+if (mobileMenu) {
+  mobileMenu.addEventListener("click", () => {
+    nav.classList.toggle("active");
+  });
+}
+
 let slides = document.querySelectorAll(".slide");
 let index = 1;
 //Startslide
@@ -176,4 +178,31 @@ function filterBooks(category) {
       book.style.display = "none";
     }
   });
+}
+
+function toggleSwitch() {
+  const currentTheme = document.documentElement.getAttribute("data-theme");
+  const images = document.querySelectorAll("img");
+
+  images.forEach((img) => {
+    let url = img.src;
+    let newUrl;
+
+    if (currentTheme === "dark") {
+      newUrl = url.replace("darkm", "lightm");
+    } else {
+      newUrl = url.replace("lightm", "darkm");
+    }
+
+    img.src = newUrl;
+  });
+  console.log(images);
+
+  if (currentTheme === "dark") {
+    document.documentElement.setAttribute("data-theme", "light");
+    console.log("dark");
+  } else {
+    document.documentElement.setAttribute("data-theme", "dark");
+    console.log("light");
+  }
 }
