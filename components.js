@@ -2,6 +2,73 @@ $(document).ready(function () {
   $("#footer").load("./components/footer.html");
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+  const buchcontainer = document.getElementById("buchcontainer");
+  const buecher = document.querySelectorAll(".card");
+  const overlay = document.querySelector(".book-overlay");
+
+  let aktuellesBuch;
+  let author;
+  let title;
+  let keyword;
+  let description;
+  let image;
+
+  if (buchcontainer) {
+    //angeklicktes Element finden
+    buecher.forEach((buch) => {
+      buch.addEventListener("click", (event) => {
+        //angeklicktes Buch Buch
+        aktuellesBuch = event.currentTarget;
+
+        author = buch.querySelector(".book-author").innerHTML;
+        title = buch.querySelector(".book-title").innerHTML;
+        if (buch.querySelector(".book-keywords")) {
+          keyword = buch.querySelector(".book-keywords").innerHTML;
+        } else {
+          keyword = "";
+        }
+
+        description = buch.querySelector(".hidden-klappentext").innerHTML;
+        image = buch.querySelector(".book-image").getAttribute("src");
+
+        overlay.innerHTML = `
+        <img
+            src="./images/icon-close-darkm.png"
+            class="close"
+          onclick="closeOverlay()"
+          />
+          
+          <figure class="book-cover">
+          <img src="${image}"  alt=""
+              class="book-image" />
+          </figure>
+          <div class="overlay-info">
+            <h4 class="book-title">${title}</h4>
+            <p class="book-keywords">${keyword}</p>
+            <p class="small book-author">${author}</p>
+          </div>
+          <p>${description}</p>
+        `;
+
+        overlay.style.display = "grid";
+        buchcontainer.style.filter = "blur(3px)";
+      });
+    });
+  } else {
+    console.error("Das Element 'buchcontainer' wurde nicht gefunden.");
+  }
+});
+
+function closeOverlay() {
+  console.log("close");
+  const overlay = document.querySelector(".book-overlay");
+  const buchcontainer = document.getElementById("buchcontainer");
+
+  overlay.style.display = "none";
+  buchcontainer.style.filter = "";
+}
+
 $(document).ready(function () {
   $("#header").load("./components/header.html", function () {
     let aktuelleSeite = window.location.pathname.split("/").pop();
@@ -28,13 +95,13 @@ $(document).ready(function () {
 });
 
 //Mobiles Menu
-const mobileMenu = document.getElementById("hamburger-menu");
+/*const mobileMenu = document.getElementById("hamburger-menu");
 const nav = document.querySelector("nav");
 
 mobileMenu.addEventListener("click", () => {
   nav.classList.toggle("active");
 });
-
+*/
 let slides = document.querySelectorAll(".slide");
 let index = 1;
 //Startslide
@@ -60,7 +127,7 @@ function showSlide() {
       slides[i].style.display = "none";
     }
   }
-  currentSlide.style.display = "block";
+  // currentSlide.style.display = "block";
 }
 
 function navigate(n) {
@@ -86,4 +153,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
   checkWindowSize();
   window.addEventListener("resize", checkWindowSize);
+});
+
+//Klappentext overlay
+
+document.addEventListener("DOMContentLoaded", () => {
+  const buchcontainer = document.querySelector(".book-cover");
+
+  buchcontainer.addEventListener("click", (event) => {
+    const currentTarget = event.currentTarget.tagName;
+    console.log("click");
+  });
 });
