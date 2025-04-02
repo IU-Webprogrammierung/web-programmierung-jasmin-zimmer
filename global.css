@@ -2,12 +2,14 @@
     --bg: #222222;
     --card: #2C2C2C;
     --font: #C2C2C2;
+    --hero-text: #C2C2C2;
 }
 
 [data-theme="light"] {
     --bg: #EEEEEE;
     --card: #DBDBDB;
     --font: #454545;
+    --hero-text: #a7a7a7;
 }
 
 
@@ -255,7 +257,7 @@ nav {
     position: absolute;
     height: 3px;
     width: 100%;
-    background: var(--font);
+    background: var(--hero-text);
     border-radius: 9px;
     opacity: 1;
     left: 0;
@@ -315,17 +317,17 @@ nav {
 
 header {
     position: relative;
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("./images/hero-darkm.jpg") center center;
-    
     background-size:cover; 
     margin: 1rem;
     padding: 1rem;
     border-radius: 20px;
-
+   
     h1 {
+        color: var(--hero-text);
         text-align: center;
         padding-block: 1rem 2rem;
     }
+
     
 } 
 
@@ -339,7 +341,7 @@ header > button {
     display: flex;
     justify-content: center;
     background: none;
-    border: 1px solid var(--font);
+    border: 1px solid var(--hero-text);
     border-radius: 100%;
     width: 2.5rem;
     height: 2.5rem;

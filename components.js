@@ -2,12 +2,36 @@ $(document).ready(function () {
   $("#footer").load("./components/footer.html");
 });
 
+$(document).ready(function () {
+  $("#header").load("./components/header.html", function () {
+    let aktuelleSeite = window.location.pathname.split("/").pop();
+
+    console.log(aktuelleSeite);
+
+    switch (aktuelleSeite) {
+      case "werdegang.html":
+        $(".header-heading").text("Mein Werdegang");
+        break;
+      case "buchfavoriten.html":
+        $(".header-heading").text("Meine Buchfavoriten");
+        break;
+      case "ueber-mich.html":
+        $(".header-heading").text("Über mich");
+        break;
+    }
+
+    $("#hamburger-menu").on("click", function () {
+      $(".nav").toggleClass("active");
+      console.log("Hamburger-Menü geklickt!");
+    });
+  });
+});
+
 document.addEventListener("DOMContentLoaded", () => {
   const buchcontainer = document.getElementById("buchcontainer");
   const buecher = document.querySelectorAll(".card");
   const overlay = document.querySelector(".book-overlay");
 
-  let aktuellesBuch;
   let author;
   let title;
   let keyword;
@@ -66,31 +90,6 @@ function closeOverlay() {
   overlay.style.display = "none";
   buchcontainer.style.filter = "";
 }
-
-$(document).ready(function () {
-  $("#header").load("./components/header.html", function () {
-    let aktuelleSeite = window.location.pathname.split("/").pop();
-
-    console.log(aktuelleSeite);
-
-    switch (aktuelleSeite) {
-      case "werdegang.html":
-        $(".header-heading").text("Mein Werdegang");
-        break;
-      case "buchfavoriten.html":
-        $(".header-heading").text("Meine Buchfavoriten");
-        break;
-      case "ueber-mich.html":
-        $(".header-heading").text("Über mich");
-        break;
-    }
-
-    $("#hamburger-menu").on("click", function () {
-      $(".nav").toggleClass("active");
-      console.log("Hamburger-Menü geklickt!");
-    });
-  });
-});
 
 //Mobiles Menu
 const mobileMenu = document.getElementById("hamburger-menu");
@@ -184,6 +183,7 @@ function toggleSwitch() {
   const currentTheme = document.documentElement.getAttribute("data-theme");
   const images = document.querySelectorAll("img");
 
+  //Bildvariante laden
   images.forEach((img) => {
     let url = img.src;
     let newUrl;
@@ -196,13 +196,38 @@ function toggleSwitch() {
 
     img.src = newUrl;
   });
-  console.log(images);
 
   if (currentTheme === "dark") {
-    document.documentElement.setAttribute("data-theme", "light");
-    console.log("dark");
-  } else {
-    document.documentElement.setAttribute("data-theme", "dark");
-    console.log("light");
+    setTheme("light");
+  } else if (currentTheme === "light") {
+    setTheme("dark");
   }
 }
+
+//Seitenübergreifer Themewechsel
+function setTheme(theme) {
+  document.documentElement.setAttribute("data-theme", theme);
+  localStorage.setItem("theme", theme);
+
+  if (theme === "dark") {
+    document.documentElement.setAttribute("data-theme", "dark");
+    document.body.style.backgroundImage = "url(./images/dark-bg.png)";
+    document.querySelector("header").style.background =
+      'linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("/images/hero-darkm.jpg") center center';
+  } else if (theme === "light") {
+    document.documentElement.setAttribute("data-theme", "light");
+    document.body.style.backgroundImage = "url(./images/light-bg.png)";
+    document.querySelector("header").style.background =
+      'linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("/images/hero-lightm.jpg") center center';
+  }
+}
+
+function loadTheme() {
+  let savedTheme = localStorage.getItem("theme") || "dark";
+
+  setTheme(savedTheme);
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  loadTheme();
+});

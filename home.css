@@ -18,15 +18,17 @@ header {
     margin-inline: 1rem;
 }
 
-.text-wrapper > h2 {
+.detail-text > p, .detail-text > h2 {
+    color: var(--hero-text);
     margin-bottom: 1rem;
 }
+
 
 header > button {
     display: flex;
     justify-content: center;
     background: none;
-    border: 1px solid var(--font);
+    border: 1px solid var(--hero-text);
     border-radius: 100%;
     width: 2.5rem;
     height: 2.5rem;

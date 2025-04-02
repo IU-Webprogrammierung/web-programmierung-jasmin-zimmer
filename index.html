@@ -16,7 +16,6 @@
     <title>Startseite</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script defer src="./components.js"></script>
-    <script defer src="./themeSwitch.js"></script>
   </head>
 
   <body>
@@ -43,7 +42,11 @@
         <!--Toggle Button (Light & Dark Theme)-->
         <!--Funktionalität wird noch umgesetzt-->
         <label class="switch">
-          <input type="checkbox" />
+          <input
+            class="toggle-checkbox"
+            type="checkbox"
+            onclick="toggleSwitch()"
+          />
           <span class="slider"></span>
         </label>
       </nav>
