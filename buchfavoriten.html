@@ -10,6 +10,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script defer src="./components.js"></script>
     <script defer src="rating.js"></script>
+    <script defer src="overlay.js"></script>
   </head>
   <body>
     <header id="header"></header>
@@ -35,26 +36,12 @@
         </div>
         <div class="divider"></div>
 
-        <div class="book-overlay hidden">
-          <img
-            src="./images/icon-close-darkm.png"
-            class="close"
-            onclick="closeOverlay()"
-            aria-label="Buchdetails schließen"
-          />
-          <figure class="book-cover">
-            <img src="" alt="" class="book-image" />
-          </figure>
-          <div class="overlay-info">
-            <h3 class="book-title"></h3>
-            <p class="book-keywords"></p>
-            <p class="small book-author"></p>
-          </div>
-          <p></p>
+        <div class="book-overlay hidden" role="dialog">
+          <img src="./images/icon-close-darkm.png" class="close close-detail" />
         </div>
 
         <div class="container" id="buchcontainer">
-          <article class="card fantasy" tabindex="0">
+          <article class="card fantasy">
             <figure class="book-cover">
               <img
                 src="./images/buecher/Asrai-1.jpg"
@@ -66,17 +53,17 @@
               <h3 class="book-title">Asrai - Das Portal der Drachen</h3>
               <p class="book-keywords">Magie, Identität und Dunkle Mächte</p>
               <p class="small book-author">Liane Mars</p>
-              <p class="hidden-klappentext">
-                Entgegen aller Konventionen darf die mittellose Elaja eine
-                Ausbildung zur Drachenreiterin beginnen. Doch ohne eigenen
-                Drachen zur praktischen Prüfung anzutreten, ist schwierig. Zum
-                Glück besitzt der nach einem schweren Flugunfall traumatisierte
-                Ian gleich zwei Drachen. Die beiden gehen einen Deal ein, aber
-                schon bald erkennt Elaja, dass Ians Drachen Geheimnisse hüten,
-                die besser unentdeckt geblieben wären.
-              </p>
               <button class="detail-button">zu den Buchdetails</button>
             </div>
+            <p class="hidden-klappentext">
+              Entgegen aller Konventionen darf die mittellose Elaja eine
+              Ausbildung zur Drachenreiterin beginnen. Doch ohne eigenen Drachen
+              zur praktischen Prüfung anzutreten, ist schwierig. Zum Glück
+              besitzt der nach einem schweren Flugunfall traumatisierte Ian
+              gleich zwei Drachen. Die beiden gehen einen Deal ein, aber schon
+              bald erkennt Elaja, dass Ians Drachen Geheimnisse hüten, die
+              besser unentdeckt geblieben wären.
+            </p>
           </article>
 
           <article class="card fantasy">
@@ -91,6 +78,8 @@
               <h3 class="book-title">Asrai –Die Magie der Drachen</h3>
               <p class="book-keywords">Freundschaft, Kräfte und Bedrohung</p>
               <p class="small book-author">Liane Mars</p>
+
+              <button class="detail-button">zu den Buchdetails</button>
             </div>
             <p class="hidden-klappentext">
               Elaja besitzt endlich ihren eigenen Drachen, nur ist der ganz
@@ -112,8 +101,8 @@
             <div class="book-info" data-rating="3.5">
               <h3 class="book-title">Asrai - Das Herz der Drachen</h3>
               <p class="stichwörter">Entscheidung, Abenteuer und Schicksal</p>
-
               <p class="small book-author">Liane Mars</p>
+              <button class="detail-button">zu den Buchdetails</button>
             </div>
             <p class="hidden-klappentext">
               Eigentlich will Linnea nur in Ruhe als Dorfheilerin leben.
@@ -143,6 +132,7 @@
               </h3>
               <p class="book-keywords">Intrige, Loyalität und Politik</p>
               <p class="small book-author">Danielle L. Jensen</p>
+              <button class="detail-button">zu den Buchdetails</button>
             </div>
             <p class="hidden-klappentext">
               Ihr ganzes Leben lang wurde Lara darauf vorbereitet, Aren, den
@@ -170,6 +160,7 @@
               </h3>
               <p class="book-keywords">Vertrauen, Machtspiele und Frieden</p>
               <p class="small book-author">Danielle L. Jensen</p>
+              <button class="detail-button">zu den Buchdetails</button>
             </div>
             <p class="hidden-klappentext">
               Lara hat die Intrigen ihres Vaters zu spät erkannt. Durch ihren
@@ -197,6 +188,7 @@
               <h3 class="book-title">Broken Blade</h3>
               <p class="book-keywords">Kampf, Selbstfindung und Stärke</p>
               <p class="small book-author">Melissa Blair</p>
+              <button class="detail-button">zu den Buchdetails</button>
             </div>
             <p class="hidden-klappentext">
               Als Klinge des Königs hat Keera alles erreicht. Sie ist die
@@ -221,6 +213,7 @@
               <!--ändern-->
               <p class="book-keywords">Wettkampf, Geheimnisse und Assassinin</p>
               <p class="small book-author">Melissa Blair</p>
+              <button class="detail-button">zu den Buchdetails</button>
             </div>
             <p class="hidden-klappentext">
               Für das Königreich ist Keera die Klinge des Königs, seine
@@ -247,6 +240,7 @@
               <h3 class="book-title">Die Erwählte</h3>
               <p class="book-keywords">Wettkampf, Geheimnisse und Assassinin</p>
               <p class="small book-author">Sarah J. Maas</p>
+              <button class="detail-button">zu den Buchdetails</button>
             </div>
             <p class="hidden-klappentext">
               Celaena Sardothien ist jung, schön und zum Tode verurteilt. Doch
@@ -274,6 +268,7 @@
               <h3 class="book-title">Kriegerin im Schatte</h3>
               <p class="book-keywords">Loyalität, Dunkle Mächte und Konflikt</p>
               <p class="small book-author">Sarah J. Maas</p>
+              <button class="detail-button">zu den Buchdetails</button>
             </div>
             <p class="hidden-klappentext">
               Celaena hat sich in einem unerbittlichen Wettkampf gegen ihre
@@ -302,6 +297,7 @@
                 Identität, Meisterschaft und Verbündete
               </p>
               <p class="small book-author">Sarah J. Maas</p>
+              <button class="detail-button">zu den Buchdetails</button>
             </div>
             <p class="hidden-klappentext">
               Von den Salzminen Endoviers über das gläserne Schloss in Rifthold
@@ -324,6 +320,7 @@
               <h3 class="book-title">Königin der Finsternis</h3>
               <p class="book-keywords">Rache, Freundschaft und Konfrontation</p>
               <p class="small book-author">Sarah J. Maas</p>
+              <button class="detail-button">zu den Buchdetails</button>
             </div>
             <p class="hidden-klappentext">
               Celaena hat tödliche Wettkämpfe überlebt, ihr wurde das Herz
@@ -352,6 +349,7 @@
               <h3 class="book-title">Die Sturmbezwingerin</h3>
               <p class="book-keywords">Krieg, Allianzen und Strategie</p>
               <p class="small book-author">Sarah J. Maas</p>
+              <button class="detail-button">zu den Buchdetails</button>
             </div>
             <p class="hidden-klappentext">
               Celaena ist in ihre Heimat zurückgekehrt, aber nicht mehr als
@@ -382,6 +380,7 @@
                 Heilung, Entwicklung und Unterstützung
               </p>
               <p class="small book-author">Sarah J. Maas</p>
+              <button class="detail-button">zu den Buchdetails</button>
             </div>
             <p class="hidden-klappentext">
               Selbstlos, mutig und verliebt in Celaena – all das war Chaol
@@ -414,6 +413,7 @@
               </p>
 
               <p class="small book-author">Sarah J. Maas</p>
+              <button class="detail-button">zu den Buchdetails</button>
             </div>
             <p class="hidden-klappentext">
               Aelin alias Celaena wird von der Dunklen Königin gefangen
@@ -442,6 +442,7 @@
               <p class="book-keywords">Entführung, Magie und Liebe</p>
 
               <p class="small book-author">Sarah J. Maas</p>
+              <button class="detail-button">zu den Buchdetails</button>
             </div>
             <p class="hidden-klappentext">
               Die junge Jägerin Feyre wird in das sagenumwobene Reich der Fae
@@ -465,6 +466,7 @@
               </p>
 
               <p class="small book-author">Sarah J. Maas</p>
+              <button class="detail-button">zu den Buchdetails</button>
             </div>
             <p class="hidden-klappentext">
               Feyre hat überlebt. Sie hat Amarantha, die grausame Fae-Königin,
@@ -492,6 +494,7 @@
               <p class="book-keywords">Kampf, Freiheit und Energie</p>
 
               <p class="small book-author">Sarah J. Maas</p>
+              <button class="detail-button">zu den Buchdetails</button>
             </div>
             <p class="hidden-klappentext">
               Feyre hat ihren Seelengefährten gefunden. Doch es ist nicht
@@ -519,6 +522,7 @@
               <p class="book-keywords">Charakterentwicklung, Beziehungen</p>
 
               <p class="small book-author">Sarah J. Maas</p>
+              <button class="detail-button">zu den Buchdetails</button>
             </div>
             <p class="hidden-klappentext">
               Der schreckliche Kampf gegen Hybern ist nicht spurlos an Feyre,
@@ -547,6 +551,7 @@
               </p>
 
               <p class="small book-author">Sarah J. Maas</p>
+              <button class="detail-button">zu den Buchdetails</button>
             </div>
             <p class="hidden-klappentext">
               Feyres Schwester Nesta war schon immer stolz, wütend und
@@ -579,6 +584,7 @@
               </p>
 
               <p class="small book-author">Rebecca Yarros</p>
+              <button class="detail-button">zu den Buchdetails</button>
             </div>
             <p class="hidden-klappentext">
               Violets Traum, Schriftgelehrte am renommierten Basgiath War
@@ -611,6 +617,7 @@
               </p>
 
               <p class="small book-author">Caroline Peckham</p>
+              <button class="detail-button">zu den Buchdetails</button>
             </div>
             <p class="hidden-klappentext">
               "Ich bin ein Zwilling – sowohl in Bezug auf mein Sternzeichen als
@@ -660,6 +667,7 @@
               </p>
 
               <p class="small book-author">Caroline Peckham</p>
+              <button class="detail-button">zu den Buchdetails</button>
             </div>
             <p class="hidden-klappentext">
               Sie haben versucht, uns zu vernichten. Fast wären sie damit
@@ -688,6 +696,7 @@
                 Isolation, Tödliche Berührung und Freiheit
               </p>
               <p class="small book-author">Tahereh Mafi</p>
+              <button class="detail-button">zu den Buchdetails</button>
             </div>
             <p class="hidden-klappentext">
               Ihr Leben lang war Juliette einsam, eine Ausgestoßene – ein
@@ -714,6 +723,7 @@
               </p>
 
               <p class="small book-author">Tahereh Mafi</p>
+              <button class="detail-button">zu den Buchdetails</button>
             </div>
             <p class="hidden-klappentext">
               Juliette ist die Flucht gelungen. Sie und Adam sind den Fängen des
@@ -741,6 +751,7 @@
             <div class="book-info" data-rating="4">
               <h3 class="book-title">Durch die kälteste Nacht</h3>
               <p class="small book-author">Brittainy Cherry</p>
+              <button class="detail-button">zu den Buchdetails</button>
             </div>
             <p class="hidden-klappentext">
               Ich habe so lang in der Dunkelheit gelebt, dass ich dein Licht
@@ -768,6 +779,7 @@
             <div class="book-info" data-rating="5">
               <h3 class="book-title">Gegen den bittersten Sturm</h3>
               <p class="small book-author">Brittainy Cherry</p>
+              <button class="detail-button">zu den Buchdetails</button>
             </div>
             <p class="hidden-klappentext">
               Durch ihn wusste ich, dass es Sekunden gab, in denen alles perfekt
@@ -797,6 +809,7 @@
             <div class="book-info" data-rating="5">
               <h3 class="book-title">Über die dunkelste See</h3>
               <p class="small book-author">Brittainy Cherry</p>
+              <button class="detail-button">zu den Buchdetails</button>
             </div>
             <p class="hidden-klappentext">
               Vielleicht brauchte er mich und das Licht in mir, weil er sich
@@ -825,6 +838,7 @@
             <div class="book-info" data-rating="4">
               <h3 class="book-title">Bis zum hellsten Morgen</h3>
               <p class="small book-author">Brittainy Cherry</p>
+              <button class="detail-button">zu den Buchdetails</button>
             </div>
             <p class="hidden-klappentext">
               Der größte Schauspieler der Welt hat einmal mir gehört, aber jetzt
@@ -852,6 +866,7 @@
             <div class="book-info" data-rating="3.5">
               <h3 class="book-title">Denn ohne Musik werden wir ertrinken</h3>
               <p class="small book-author">Brittainy Cherry</p>
+              <button class="detail-button">zu den Buchdetails</button>
             </div>
             <p class="hidden-klappentext">
               Sie bestimmt die Schläge meines Herzens. Jedes Liebeslied, das ich
@@ -881,6 +896,7 @@
             <div class="book-info" data-rating="4">
               <h3 class="book-title">Denn ohne Liebe werden wir zerbrechen</h3>
               <p class="small book-author">Brittainy Cherry</p>
+              <button class="detail-button">zu den Buchdetails</button>
             </div>
             <p class="hidden-klappentext">
               Du hast mich gefunden, als mein Herz kaum noch geschlagen hat. Du
@@ -909,6 +925,7 @@
               <h3 class="book-title">Was wir im Stillen fühlen</h3>
               <p class="book-keywords"></p>
               <p class="small book-author">Brittainy Cherry</p>
+              <button class="detail-button">zu den Buchdetails</button>
             </div>
             <p class="hidden-klappentext">
               WIR SOLLTEN IMMER MIT DEM UNVORHERSEHBAREN RECHNEN. DU MUSST NUR
@@ -938,6 +955,7 @@
             <div class="book-info" data-rating="4">
               <h3 class="book-title">Wenn deine Wärme meine Källte besiegt</h3>
               <p class="small book-author">Brittainy Cherry</p>
+              <button class="detail-button">zu den Buchdetails</button>
             </div>
             <p class="hidden-klappentext">
               Eine Liebe, die es einem erlaubt, man selbst zu sein. Das ist die
@@ -967,6 +985,7 @@
             <div class="book-info" data-rating="5">
               <h3 class="book-title">Wenn der Frost dein Herz berührt</h3>
               <p class="small book-author">Brittainy Cherry</p>
+              <button class="detail-button">zu den Buchdetails</button>
             </div>
             <p class="hidden-klappentext">
               In diesem Augenblick verlor ich mich selbst. In diesem Augenblick
@@ -992,6 +1011,7 @@
             <div class="book-info" data-rating="3.5">
               <h3 class="book-title">Hold me</h3>
               <p class="small book-author">Anna Savas</p>
+              <button class="detail-button">zu den Buchdetails</button>
             </div>
             <p class="hidden-klappentext">
               Verrat mir deine Wahrheiten, dann erfährst du meine Als Zoe die
@@ -1019,6 +1039,7 @@
             <div class="book-info" data-rating="5">
               <h3 class="book-title">Stay here</h3>
               <p class="small book-author">Anna Savas</p>
+              <button class="detail-button">zu den Buchdetails</button>
             </div>
             <p class="hidden-klappentext">
               Es beginnt mit einem Song Seit dem Tod ihrer Eltern hat Rayne
@@ -1046,6 +1067,7 @@
             <div class="book-info" data-rating="4">
               <h3 class="book-title">Shine bright</h3>
               <p class="small book-author">Anna Savas</p>
+              <button class="detail-button">zu den Buchdetails</button>
             </div>
             <p class="hidden-klappentext">
               Nur ein einziges Mal. Eine Nacht. Alles ist egal. Nur er nicht Das
@@ -1075,6 +1097,7 @@
             <div class="book-info" data-rating="3.5">
               <h3 class="book-title">Move on</h3>
               <p class="small book-author">Anna Savas</p>
+              <button class="detail-button">zu den Buchdetails</button>
             </div>
             <p class="hidden-klappentext">
               Wenn ich dich jetzt küssen würde, würdest du es zulassen? Als die
@@ -1103,6 +1126,7 @@
             <div class="book-info" data-rating="4">
               <h3 class="book-title">Mimik</h3>
               <p class="small book-author">Sebastian Fitzek</p>
+              <button class="detail-button">zu den Buchdetails</button>
             </div>
             <p class="hidden-klappentext">
               Ein winziges Zucken im Mundwinkel, die kleinste Veränderung in der
@@ -1133,6 +1157,7 @@
             <div class="book-info" data-rating="5">
               <h3 class="book-title">Rachesommer</h3>
               <p class="small book-author">Andreas Gruber</p>
+              <button class="detail-button">zu den Buchdetails</button>
             </div>
             <p class="hidden-klappentext">
               Wien. Vier wohlhabende Männer im besten Alter sterben innerhalb
@@ -1157,6 +1182,7 @@
             <div class="book-info" data-rating="4">
               <h3 class="book-title">Racheherbst</h3>
               <p class="small book-author">Andreas Gruber</p>
+              <button class="detail-button">zu den Buchdetails</button>
             </div>
             <p class="hidden-klappentext">
               Unter einer Leipziger Brücke wird die verstümmelte Leiche einer
@@ -1184,6 +1210,7 @@
             <div class="book-info" data-rating="3">
               <h3 class="book-title">Später</h3>
               <p class="small book-author">Stephen King</p>
+              <button class="detail-button">zu den Buchdetails</button>
             </div>
             <p class="hidden-klappentext">
               Jamie Conklin wächst in Manhattan auf und wirkt wie ein normaler
@@ -1211,6 +1238,7 @@
             <div class="book-info" data-rating="5">
               <h3 class="book-title">Die 1% Methode</h3>
               <p class="small book-author">James Clear</p>
+              <button class="detail-button">zu den Buchdetails</button>
             </div>
             <p class="hidden-klappentext">
               Das Geheimnis des Erfolgs: »Die 1%-Methode«. Sie liefert das
@@ -1237,6 +1265,7 @@
             <div class="book-info" data-rating="5">
               <h3 class="book-title">Feel Good Productivity</h3>
               <p class="small book-author">Ali Abdaal</p>
+              <button class="detail-button">zu den Buchdetails</button>
             </div>
             <p class="hidden-klappentext">
               Du versinkst in Arbeit, trotzdem ist Prokrastination dein
@@ -1265,6 +1294,7 @@
             <div class="book-info" data-rating="4.5">
               <h3 class="book-title">Good Vibes, Good Life</h3>
               <p class="small book-author">Vex King</p>
+              <button class="detail-button">zu den Buchdetails</button>
             </div>
             <p class="hidden-klappentext">
               Wie kann man lernen, sich wirklich zu lieben? Wie können negative
@@ -1293,6 +1323,7 @@
             <div class="book-info" data-rating="3.5">
               <h3 class="book-title">The mountain is you</h3>
               <p class="small book-author">Biranna Wiest</p>
+              <button class="detail-button">zu den Buchdetails</button>
             </div>
             <p class="hidden-klappentext">
               Du machst dir ständig Sorgen, obwohl es dir gut geht und du dich
