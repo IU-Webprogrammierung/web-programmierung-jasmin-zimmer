@@ -37,6 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
   let keyword;
   let description;
   let image;
+  let imagesAlt;
 
   if (buchcontainer) {
     //angeklicktes Element finden
@@ -55,6 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         description = buch.querySelector(".hidden-klappentext").innerHTML;
         image = buch.querySelector(".book-image").getAttribute("src");
+        imageAlt = buch.querySelector(".book-image").getAttribute("alt");
 
         overlay.innerHTML = `
         <img
@@ -64,11 +66,11 @@ document.addEventListener("DOMContentLoaded", () => {
           />
           
           <figure class="book-cover">
-          <img src="${image}"  alt=""
+          <img src="${image}"  alt="${imageAlt}"
               class="book-image" />
           </figure>
           <div class="overlay-info">
-            <h4 class="book-title">${title}</h4>
+            <h3 class="book-title">${title}</h3>
             <p class="book-keywords">${keyword}</p>
             <p class="small book-author">${author}</p>
           </div>
@@ -108,25 +110,26 @@ showSlide(index);
 
 function showSlide() {
   let currentSlide = slides[index - 1];
-
-  //rückwärts bewegen, wenn index kleiner als Start ist
-  if (index <= 0) {
-    index = slides.length;
-    currentSlide = slides[index - 1];
-  }
-
-  //von vorn anfang, nach einem kompletten Durchlauf
-  if (index > slides.length) {
-    index = 1;
-    currentSlide = slides[index + 1];
-  }
-
-  for (i = 0; i < slides.length; i++) {
-    if (slides[i] != currentSlide) {
-      slides[i].style.display = "none";
+  if (currentSlide) {
+    if (index <= 0) {
+      index = slides.length;
+      currentSlide = slides[index - 1];
     }
+
+    //von vorn anfang, nach einem kompletten Durchlauf
+    if (index > slides.length) {
+      index = 1;
+      currentSlide = slides[index + 1];
+    }
+
+    for (i = 0; i < slides.length; i++) {
+      if (slides[i] != currentSlide) {
+        slides[i].style.display = "none";
+      }
+    }
+    currentSlide.style.display = "block";
   }
-  // currentSlide.style.display = "block";
+  //rückwärts bewegen, wenn index kleiner als Start ist
 }
 
 function navigate(n) {
@@ -180,23 +183,7 @@ function filterBooks(category) {
 }
 
 function toggleSwitch() {
-  const currentTheme = document.documentElement.getAttribute("data-theme");
-  const images = document.querySelectorAll("img");
-
-  //Bildvariante laden
-  images.forEach((img) => {
-    let url = img.src;
-    let newUrl;
-
-    if (currentTheme === "dark") {
-      newUrl = url.replace("darkm", "lightm");
-    } else {
-      newUrl = url.replace("lightm", "darkm");
-    }
-
-    img.src = newUrl;
-  });
-
+  const currentTheme = localStorage.getItem("theme");
   if (currentTheme === "dark") {
     setTheme("light");
   } else if (currentTheme === "light") {
@@ -220,6 +207,22 @@ function setTheme(theme) {
     document.querySelector("header").style.background =
       'linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("/images/hero-lightm.jpg") center center';
   }
+
+  const images = document.querySelectorAll("img");
+
+  //Bildvariante laden
+  images.forEach((img) => {
+    let url = img.src;
+    let newUrl;
+
+    if (theme === "light") {
+      newUrl = url.replace("darkm", "lightm");
+    } else {
+      newUrl = url.replace("lightm", "darkm");
+    }
+
+    img.src = newUrl;
+  });
 }
 
 function loadTheme() {

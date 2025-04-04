@@ -40,12 +40,13 @@
             src="./images/icon-close-darkm.png"
             class="close"
             onclick="closeOverlay()"
+            aria-label="Buchdetails schließen"
           />
           <figure class="book-cover">
             <img src="" alt="" class="book-image" />
           </figure>
           <div class="overlay-info">
-            <h4 class="book-title"></h4>
+            <h3 class="book-title"></h3>
             <p class="book-keywords"></p>
             <p class="small book-author"></p>
           </div>
@@ -53,16 +54,16 @@
         </div>
 
         <div class="container" id="buchcontainer">
-          <article class="card fantasy">
+          <article class="card fantasy" tabindex="0">
             <figure class="book-cover">
               <img
                 src="./images/buecher/Asrai-1.jpg"
-                alt=""
+                alt="Cover mit zwei Drachen die um eine Portal herumfliegen"
                 class="book-image"
               />
             </figure>
             <div class="book-info" data-rating="4">
-              <h4 class="book-title">Asrai - Das Portal der Drachen</h4>
+              <h3 class="book-title">Asrai - Das Portal der Drachen</h3>
               <p class="book-keywords">Magie, Identität und Dunkle Mächte</p>
               <p class="small book-author">Liane Mars</p>
               <p class="hidden-klappentext">
@@ -74,6 +75,7 @@
                 schon bald erkennt Elaja, dass Ians Drachen Geheimnisse hüten,
                 die besser unentdeckt geblieben wären.
               </p>
+              <button class="detail-button">zu den Buchdetails</button>
             </div>
           </article>
 
@@ -81,12 +83,12 @@
             <figure class="book-cover">
               <img
                 src="./images/buecher/Asrai-2.jpg"
-                alt=""
+                alt="Buchcover mit zwei Drachen vor einem feurigen Hintergrund"
                 class="book-image"
               />
             </figure>
             <div class="book-info" data-rating="5">
-              <h4 class="book-title">Asrai –Die Magie der Drachen</h4>
+              <h3 class="book-title">Asrai –Die Magie der Drachen</h3>
               <p class="book-keywords">Freundschaft, Kräfte und Bedrohung</p>
               <p class="small book-author">Liane Mars</p>
             </div>
@@ -103,12 +105,12 @@
             <figure class="book-cover">
               <img
                 src="./images/buecher/Asrai-3.jpg"
-                alt=""
+                alt="Buchcover mit zwei sich ansehende Drachen und ein weiter Drachen der Feuer speit"
                 class="book-image"
               />
             </figure>
             <div class="book-info" data-rating="3.5">
-              <h4 class="book-title">Asrai - Das Herz der Drachen</h4>
+              <h3 class="book-title">Asrai - Das Herz der Drachen</h3>
               <p class="stichwörter">Entscheidung, Abenteuer und Schicksal</p>
 
               <p class="small book-author">Liane Mars</p>
@@ -131,14 +133,14 @@
             <figure class="book-cover">
               <img
                 src="./images/buecher/bride-kingdom-1.jpg"
-                alt=""
+                alt="Buchcover mit türkisfarbenden magisch wirkenden Fäden"
                 class="book-image"
               />
             </figure>
             <div class="book-info" data-rating="4">
-              <h4 class="book-title">
+              <h3 class="book-title">
                 Bridge Kingdom – Der Schwur der Spionin
-              </h4>
+              </h3>
               <p class="book-keywords">Intrige, Loyalität und Politik</p>
               <p class="small book-author">Danielle L. Jensen</p>
             </div>
@@ -158,14 +160,14 @@
             <figure class="book-cover">
               <img
                 src="./images/buecher/Bride-Kingdom-2.jpg"
-                alt=""
+                alt="Buchcover mit goldenen Schattierungen"
                 class="book-image"
               />
             </figure>
             <div class="book-info" data-rating="3.5">
-              <h4 class="book-title">
+              <h3 class="book-title">
                 Bridge Kingdom – Der Verrat der Königin
-              </h4>
+              </h3>
               <p class="book-keywords">Vertrauen, Machtspiele und Frieden</p>
               <p class="small book-author">Danielle L. Jensen</p>
             </div>
@@ -187,12 +189,12 @@
             <figure class="book-cover">
               <img
                 src="./images/buecher/broken-blade.jpg"
-                alt=""
+                alt="Buchcover mit einer schwarzhaarigen Assassinin, die silbere Augen hat und eine Kapuze trägt"
                 class="book-image"
               />
             </figure>
             <div class="book-info" data-rating="5">
-              <h4 class="book-title">Broken Blade</h4>
+              <h3 class="book-title">Broken Blade</h3>
               <p class="book-keywords">Kampf, Selbstfindung und Stärke</p>
               <p class="small book-author">Melissa Blair</p>
             </div>
@@ -210,12 +212,12 @@
             <figure class="book-cover">
               <img
                 src="./images/buecher/Shadow-crown.jpg"
-                alt=""
+                alt="Bild von einer schwarzhaarigen Assassinin, die vor einem leuchtetn Gestrüpp steht"
                 class="book-image"
               />
             </figure>
             <div class="book-info" data-rating="4">
-              <h4 class="book-title">Shadow Crown</h4>
+              <h3 class="book-title">Shadow Crown</h3>
               <!--ändern-->
               <p class="book-keywords">Wettkampf, Geheimnisse und Assassinin</p>
               <p class="small book-author">Melissa Blair</p>
@@ -237,12 +239,12 @@
             <figure class="book-cover">
               <img
                 src="./images/buecher/throne-of-glass-1.jpg"
-                alt=""
+                alt="Buchcover mit eine großen Tor indem eine Frau steht"
                 class="book-image"
               />
             </figure>
             <div class="book-info" data-rating="5">
-              <h4 class="book-title">Die Erwählte</h4>
+              <h3 class="book-title">Die Erwählte</h3>
               <p class="book-keywords">Wettkampf, Geheimnisse und Assassinin</p>
               <p class="small book-author">Sarah J. Maas</p>
             </div>
@@ -264,12 +266,12 @@
             <figure class="book-cover">
               <img
                 src="./images/buecher/crown-of-midnight.jpg"
-                alt=""
+                alt="Buchcover mit einer Frau, die vor einem Treppenaufgang steht"
                 class="book-image"
               />
             </figure>
             <div class="book-info" data-rating="4">
-              <h4 class="book-title">Kriegerin im Schatte</h4>
+              <h3 class="book-title">Kriegerin im Schatte</h3>
               <p class="book-keywords">Loyalität, Dunkle Mächte und Konflikt</p>
               <p class="small book-author">Sarah J. Maas</p>
             </div>
@@ -290,12 +292,12 @@
             <figure class="book-cover">
               <img
                 src="./images/buecher/heir-of-fire.jpg"
-                alt=""
+                alt="Buchcover mit eine fliegenden Vogel in zwischen Bäumen fliegt"
                 class="book-image"
               />
             </figure>
             <div class="book-info" data-rating="3">
-              <h4 class="book-title">Erbin des Feuers</h4>
+              <h3 class="book-title">Erbin des Feuers</h3>
               <p class="book-keywords">
                 Identität, Meisterschaft und Verbündete
               </p>
@@ -314,12 +316,12 @@
             <figure class="book-cover">
               <img
                 src="./images/buecher/queen-of-shadows.jpg"
-                alt=""
+                alt="Buchcover von einem düsteren Schloss"
                 class="book-image"
               />
             </figure>
             <div class="book-info" data-rating="4">
-              <h4 class="book-title">Königin der Finsternis</h4>
+              <h3 class="book-title">Königin der Finsternis</h3>
               <p class="book-keywords">Rache, Freundschaft und Konfrontation</p>
               <p class="small book-author">Sarah J. Maas</p>
             </div>
@@ -342,12 +344,12 @@
             <figure class="book-cover">
               <img
                 src="./images/buecher/empire-of-storms.jpg"
-                alt=""
+                alt="Buchcover mit einer angsteinflössenden Meereswelle"
                 class="book-image"
               />
             </figure>
             <div class="book-info" data-rating="4">
-              <h4 class="book-title">Die Sturmbezwingerin</h4>
+              <h3 class="book-title">Die Sturmbezwingerin</h3>
               <p class="book-keywords">Krieg, Allianzen und Strategie</p>
               <p class="small book-author">Sarah J. Maas</p>
             </div>
@@ -370,12 +372,12 @@
             <figure class="book-cover">
               <img
                 src="./images/buecher/tower-of-dawn.jpg"
-                alt=""
+                alt="Buchcover von einem abgelegte Turm in der Wüste"
                 class="book-image"
               />
             </figure>
             <div class="book-info" data-rating="5">
-              <h4 class="book-title">Der verwundete Krieger</h4>
+              <h3 class="book-title">Der verwundete Krieger</h3>
               <p class="book-keywords">
                 Heilung, Entwicklung und Unterstützung
               </p>
@@ -401,12 +403,12 @@
             <figure class="book-cover">
               <img
                 src="./images/buecher/kingdom-of-ash.jpg"
-                alt=""
+                alt="Buchcover von einer Blumenwiese mit einem Schloss im Hintergrund"
                 class="book-image"
               />
             </figure>
             <div class="book-info" data-rating="5">
-              <h4 class="book-title">Herrscherin über Asche und Zorn</h4>
+              <h3 class="book-title">Herrscherin über Asche und Zorn</h3>
               <p class="book-keywords">
                 Vereinigung, Schicksal und Finaler Kampf
               </p>
@@ -431,12 +433,12 @@
             <figure class="book-cover">
               <img
                 src="./images/buecher/Dornen-und-Rosen.jpg"
-                alt=""
+                alt="Buchcover von einer Frau, die von Rosenzweigen umgeben ist"
                 class="book-image"
               />
             </figure>
             <div class="book-info" data-rating="3">
-              <h4 class="book-title">Dornen und Rosen</h4>
+              <h3 class="book-title">Dornen und Rosen</h3>
               <p class="book-keywords">Entführung, Magie und Liebe</p>
 
               <p class="small book-author">Sarah J. Maas</p>
@@ -452,12 +454,12 @@
             <figure class="book-cover">
               <img
                 src="./images/buecher/Flammen-und-Finsternis.jpg"
-                alt=""
+                alt="Buchcover von einer Frau, die von Ästen und Schmetterlingen umgeben ist"
                 class="book-image"
               />
             </figure>
             <div class="book-info" data-rating="5">
-              <h4 class="book-title">Flammen und Finsternis</h4>
+              <h3 class="book-title">Flammen und Finsternis</h3>
               <p class="book-keywords">
                 Konsequenzen, Dunkle Mächte und Verbündete
               </p>
@@ -481,12 +483,12 @@
             <figure class="book-cover">
               <img
                 src="./images/buecher/Sterne-und-Schwerter.jpg"
-                alt=""
+                alt="Buchcover von einer Frau in einem pompösen Kleid umgeben von Raben"
                 class="book-image"
               />
             </figure>
             <div class="book-info" data-rating="4">
-              <h4 class="book-title">Sterne und Schwerter</h4>
+              <h3 class="book-title">Sterne und Schwerter</h3>
               <p class="book-keywords">Kampf, Freiheit und Energie</p>
 
               <p class="small book-author">Sarah J. Maas</p>
@@ -508,12 +510,12 @@
             <figure class="book-cover">
               <img
                 src="./images/buecher/Frost-und-Mondlicht.jpg"
-                alt=""
+                alt="Buchcover von einem Paar"
                 class="book-image"
               />
             </figure>
             <div class="book-info" data-rating="4">
-              <h4 class="book-title">Frost und Mondlicht</h4>
+              <h3 class="book-title">Frost und Mondlicht</h3>
               <p class="book-keywords">Charakterentwicklung, Beziehungen</p>
 
               <p class="small book-author">Sarah J. Maas</p>
@@ -534,12 +536,12 @@
             <figure class="book-cover">
               <img
                 src="./images/buecher/Silbernes-Feuer.jpg"
-                alt=""
+                alt="Buchcover von einer Frau in einem lilanen pompösen Kleid"
                 class="book-image"
               />
             </figure>
             <div class="book-info" data-rating="5">
-              <h4 class="book-title">Silbernes Feuer</h4>
+              <h3 class="book-title">Silbernes Feuer</h3>
               <p class="book-keywords">
                 Identität, politische Intrigen und Magie
               </p>
@@ -566,12 +568,12 @@
             <figure class="book-cover">
               <img
                 src="./images/buecher/Fourth-Wing.jpg"
-                alt=""
+                alt="Buchcover mit einem Symbol"
                 class="book-image"
               />
             </figure>
             <div class="book-info" data-rating="4.5">
-              <h4 class="book-title">Fourth Wing</h4>
+              <h3 class="book-title">Fourth Wing</h3>
               <p class="book-keywords">
                 Drachenreiter, Intrigen und Selbstbehauptung
               </p>
@@ -596,10 +598,14 @@
 
           <article class="card fantasy">
             <figure class="book-cover">
-              <img src="./images/buecher/ZA-1.jpg" alt="" class="book-image" />
+              <img
+                src="./images/buecher/ZA-1.jpg"
+                alt="Buchcover vom Sternzeichen Zwilling"
+                class="book-image"
+              />
             </figure>
             <div class="book-info" data-rating="5">
-              <h4 class="book-title">Das Erwachen</h4>
+              <h3 class="book-title">Das Erwachen</h3>
               <p class="book-keywords">
                 Magisches Erbe, Schwesternschaft und Kräfte
               </p>
@@ -641,10 +647,14 @@
           </article>
           <article class="card fantasy">
             <figure class="book-cover">
-              <img src="./images/buecher/ZA-2.jpg" alt="" class="book-image" />
+              <img
+                src="./images/buecher/ZA-2.jpg"
+                alt="Buchcover vom Sternzeichen Löwe"
+                class="book-image"
+              />
             </figure>
             <div class="book-info" data-rating="5">
-              <h4 class="book-title">Skrupellose Fae</h4>
+              <h3 class="book-title">Skrupellose Fae</h3>
               <p class="book-keywords">
                 Konflikte, Dunkle Mächte und Identität
               </p>
@@ -668,12 +678,12 @@
             <figure class="book-cover">
               <img
                 src="./images/buecher/shatter-me.jpg"
-                alt=""
+                alt="Buchcover mit einem Auge mit Ästen als Wimpern"
                 class="book-image"
               />
             </figure>
             <div class="book-info" data-rating="4">
-              <h4 class="book-title">Shatter Me</h4>
+              <h3 class="book-title">Shatter Me</h3>
               <p class="book-keywords">
                 Isolation, Tödliche Berührung und Freiheit
               </p>
@@ -693,12 +703,12 @@
             <figure class="book-cover">
               <img
                 src="./images/buecher/unravel-me.jpg"
-                alt=""
+                alt="Buchcover mit einem Auge "
                 class="book-image"
               />
             </figure>
             <div class="book-info" data-rating="3.5">
-              <h4 class="book-title">Unravel me</h4>
+              <h3 class="book-title">Unravel me</h3>
               <p class="book-keywords">
                 Selbstfindung, Machtkampf und komplexe Beziehungen
               </p>
@@ -724,12 +734,12 @@
             <figure class="book-cover">
               <img
                 src="./images/buecher/durch-die-kälteste-nacht.jpg"
-                alt=""
+                alt="Buchcover mit blauen fließenden Formen"
                 class="book-image"
               />
             </figure>
             <div class="book-info" data-rating="4">
-              <h4 class="book-title">Durch die kälteste Nacht</h4>
+              <h3 class="book-title">Durch die kälteste Nacht</h3>
               <p class="small book-author">Brittainy Cherry</p>
             </div>
             <p class="hidden-klappentext">
@@ -751,12 +761,12 @@
             <figure class="book-cover">
               <img
                 src="/images/buecher/gegen-den-bittersten-sturm.jpg"
-                alt=""
+                alt="Buchcover mit grünen und rosanen fließenden Formen"
                 class="book-image"
               />
             </figure>
             <div class="book-info" data-rating="5">
-              <h4 class="book-title">Gegen den bittersten Sturm</h4>
+              <h3 class="book-title">Gegen den bittersten Sturm</h3>
               <p class="small book-author">Brittainy Cherry</p>
             </div>
             <p class="hidden-klappentext">
@@ -780,12 +790,12 @@
             <figure class="book-cover">
               <img
                 src="./images/buecher/über-die-dunkelste-See.jpg"
-                alt=""
+                alt="Buchcover mit trükisenen und rosanen fließenden Formen"
                 class="book-image"
               />
             </figure>
             <div class="book-info" data-rating="5">
-              <h4 class="book-title">Über die dunkelste See</h4>
+              <h3 class="book-title">Über die dunkelste See</h3>
               <p class="small book-author">Brittainy Cherry</p>
             </div>
             <p class="hidden-klappentext">
@@ -808,12 +818,12 @@
             <figure class="book-cover">
               <img
                 src="./images/buecher/bis-zum-hellsten-Morgen.jpg"
-                alt=""
+                alt="Buchcover mit gelben fließenden Formen"
                 class="book-image"
               />
             </figure>
             <div class="book-info" data-rating="4">
-              <h4 class="book-title">Bis zum hellsten Morgen</h4>
+              <h3 class="book-title">Bis zum hellsten Morgen</h3>
               <p class="small book-author">Brittainy Cherry</p>
             </div>
             <p class="hidden-klappentext">
@@ -835,12 +845,12 @@
             <figure class="book-cover">
               <img
                 src="/images/buecher/denn-ohne-musik-werden-wir-ertrinken.jpg"
-                alt=""
+                alt="Buchcover mit vielen bunten Sprenklern"
                 class="book-image"
               />
             </figure>
             <div class="book-info" data-rating="3.5">
-              <h4 class="book-title">Denn ohne Musik werden wir ertrinken</h4>
+              <h3 class="book-title">Denn ohne Musik werden wir ertrinken</h3>
               <p class="small book-author">Brittainy Cherry</p>
             </div>
             <p class="hidden-klappentext">
@@ -864,12 +874,12 @@
             <figure class="book-cover">
               <img
                 src="/images/buecher/denn-ohne-liebe-werden-wir-zerbrechen.jpg"
-                alt=""
+                alt="Buchcover mit vielen bunten Sprenklern"
                 class="book-image"
               />
             </figure>
             <div class="book-info" data-rating="4">
-              <h4 class="book-title">Denn ohne Liebe werden wir zerbrechen</h4>
+              <h3 class="book-title">Denn ohne Liebe werden wir zerbrechen</h3>
               <p class="small book-author">Brittainy Cherry</p>
             </div>
             <p class="hidden-klappentext">
@@ -891,12 +901,12 @@
             <figure class="book-cover">
               <img
                 src="./images/buecher/was-wir-im-stille-fühlen.jpg"
-                alt=""
+                alt="Buchcover mit dunklen Hintergrund und Staub und ein Wolken im Vordergrund"
                 class="book-image"
               />
             </figure>
             <div class="book-info" data-rating="4">
-              <h4 class="book-title">Was wir im Stillen fühlen</h4>
+              <h3 class="book-title">Was wir im Stillen fühlen</h3>
               <p class="book-keywords"></p>
               <p class="small book-author">Brittainy Cherry</p>
             </div>
@@ -921,12 +931,12 @@
             <figure class="book-cover">
               <img
                 src="/images/buecher/wenn-deine-wärme-meine-kälte-besiegt.jpg"
-                alt=""
+                alt="Buchcover mit fließeden Formen und zarten Farben"
                 class="book-image"
               />
             </figure>
             <div class="book-info" data-rating="4">
-              <h4 class="book-title">Wenn deine Wärme meine Källte besiegt</h4>
+              <h3 class="book-title">Wenn deine Wärme meine Källte besiegt</h3>
               <p class="small book-author">Brittainy Cherry</p>
             </div>
             <p class="hidden-klappentext">
@@ -950,12 +960,12 @@
             <figure class="book-cover">
               <img
                 src="/images/buecher/wenn-der-frost-dein-herz-berührt.jpg"
-                alt=""
+                alt="Buchcover mit fließeden Formen und zarten Farben"
                 class="book-image"
               />
             </figure>
             <div class="book-info" data-rating="5">
-              <h4 class="book-title">Wenn der Frost dein Herz berührt</h4>
+              <h3 class="book-title">Wenn der Frost dein Herz berührt</h3>
               <p class="small book-author">Brittainy Cherry</p>
             </div>
             <p class="hidden-klappentext">
@@ -975,12 +985,12 @@
             <figure class="book-cover">
               <img
                 src="./images/buecher/Hold-me.jpg"
-                alt=""
+                alt="Buchcover mit pastell rosanen Hintergrund und Balettschuhschnürungen"
                 class="book-image"
               />
             </figure>
             <div class="book-info" data-rating="3.5">
-              <h4 class="book-title">Hold me</h4>
+              <h3 class="book-title">Hold me</h3>
               <p class="small book-author">Anna Savas</p>
             </div>
             <p class="hidden-klappentext">
@@ -1002,12 +1012,12 @@
             <figure class="book-cover">
               <img
                 src="./images/buecher/stay-here.jpg"
-                alt=""
+                alt="Buchcover mit pastell lilanen Hintergrund und Balettschuhschnürungen"
                 class="book-image"
               />
             </figure>
             <div class="book-info" data-rating="5">
-              <h4 class="book-title">Stay here</h4>
+              <h3 class="book-title">Stay here</h3>
               <p class="small book-author">Anna Savas</p>
             </div>
             <p class="hidden-klappentext">
@@ -1029,12 +1039,12 @@
             <figure class="book-cover">
               <img
                 src="./images/buecher/shine-bright.jpg"
-                alt=""
+                alt="Buchcover mit pastell blauen Hintergrund und Balettschuhschnürungen"
                 class="book-image"
               />
             </figure>
             <div class="book-info" data-rating="4">
-              <h4 class="book-title">Shine bright</h4>
+              <h3 class="book-title">Shine bright</h3>
               <p class="small book-author">Anna Savas</p>
             </div>
             <p class="hidden-klappentext">
@@ -1058,12 +1068,12 @@
             <figure class="book-cover">
               <img
                 src="./images/buecher/move-on.jpg"
-                alt=""
+                alt="Buchcover mit pastell grünen Hintergrund und Balettschuhschnürungen"
                 class="book-image"
               />
             </figure>
             <div class="book-info" data-rating="3.5">
-              <h4 class="book-title">Move on</h4>
+              <h3 class="book-title">Move on</h3>
               <p class="small book-author">Anna Savas</p>
             </div>
             <p class="hidden-klappentext">
@@ -1084,10 +1094,14 @@
           <!--Krimi & Thriller-->
           <article class="card krimi">
             <figure class="book-cover">
-              <img src="./images/buecher/Mimik.jpg" alt="" class="book-image" />
+              <img
+                src="./images/buecher/Mimik.jpg"
+                alt="Buchcover mit silbernen Hintergrund"
+                class="book-image"
+              />
             </figure>
             <div class="book-info" data-rating="4">
-              <h4 class="book-title">Mimik</h4>
+              <h3 class="book-title">Mimik</h3>
               <p class="small book-author">Sebastian Fitzek</p>
             </div>
             <p class="hidden-klappentext">
@@ -1112,12 +1126,12 @@
             <figure class="book-cover">
               <img
                 src="./images/buecher/Rachesommer.jpg"
-                alt=""
+                alt="Buchcover mit eine Beerenzweig"
                 class="book-image"
               />
             </figure>
             <div class="book-info" data-rating="5">
-              <h4 class="book-title">Rachesommer</h4>
+              <h3 class="book-title">Rachesommer</h3>
               <p class="small book-author">Andreas Gruber</p>
             </div>
             <p class="hidden-klappentext">
@@ -1136,12 +1150,12 @@
             <figure class="book-cover">
               <img
                 src="./images/buecher/Racheherbst.jpg"
-                alt=""
+                alt="Buchcover mit mit Moos und Waldpilzen"
                 class="book-image"
               />
             </figure>
             <div class="book-info" data-rating="4">
-              <h4 class="book-title">Racheherbst</h4>
+              <h3 class="book-title">Racheherbst</h3>
               <p class="small book-author">Andreas Gruber</p>
             </div>
             <p class="hidden-klappentext">
@@ -1163,12 +1177,12 @@
             <figure class="book-cover">
               <img
                 src="./images/buecher/später.jpg"
-                alt=""
+                alt="Buchcover mit einem Ausschnit einer Stadt geformt wie eine Jungenkörper"
                 class="book-image"
               />
             </figure>
             <div class="book-info" data-rating="3">
-              <h4 class="book-title">Später</h4>
+              <h3 class="book-title">Später</h3>
               <p class="small book-author">Stephen King</p>
             </div>
             <p class="hidden-klappentext">
@@ -1190,12 +1204,12 @@
             <figure class="book-cover">
               <img
                 src="./images/buecher/atomic-habits.jpg"
-                alt=""
+                alt="Buchcover"
                 class="book-image"
               />
             </figure>
             <div class="book-info" data-rating="5">
-              <h4 class="book-title">Die 1% Methode</h4>
+              <h3 class="book-title">Die 1% Methode</h3>
               <p class="small book-author">James Clear</p>
             </div>
             <p class="hidden-klappentext">
@@ -1216,12 +1230,12 @@
             <figure class="book-cover">
               <img
                 src="./images/buecher/feel-good-productivty.jpg"
-                alt=""
+                alt="Buchcover mit bunten Rechtecken"
                 class="book-image"
               />
             </figure>
             <div class="book-info" data-rating="5">
-              <h4 class="book-title">Feel Good Productivity</h4>
+              <h3 class="book-title">Feel Good Productivity</h3>
               <p class="small book-author">Ali Abdaal</p>
             </div>
             <p class="hidden-klappentext">
@@ -1244,12 +1258,12 @@
             <figure class="book-cover">
               <img
                 src="./images/buecher/good-vibes.jpg"
-                alt=""
+                alt="Buchcover von Good Vibes, Good Life"
                 class="book-image"
               />
             </figure>
             <div class="book-info" data-rating="4.5">
-              <h4 class="book-title">Good Vibes, Good Life</h4>
+              <h3 class="book-title">Good Vibes, Good Life</h3>
               <p class="small book-author">Vex King</p>
             </div>
             <p class="hidden-klappentext">
@@ -1272,12 +1286,12 @@
             <figure class="book-cover">
               <img
                 src="./images/buecher/the-mountain-is-you.jpg"
-                alt=""
+                alt="dunkles Buchcover mit einem goldenen Berg"
                 class="book-image"
               />
             </figure>
             <div class="book-info" data-rating="3.5">
-              <h4 class="book-title">The mountain is you</h4>
+              <h3 class="book-title">The mountain is you</h3>
               <p class="small book-author">Biranna Wiest</p>
             </div>
             <p class="hidden-klappentext">

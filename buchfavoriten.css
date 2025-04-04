@@ -29,6 +29,14 @@
         border-radius: 20px;
     }
 
+    button:hover {
+        background-color: var(--light-accent-color);
+        border: 1px solid var(--light-accent-color);
+        color: var(--bg);
+        transition: 0.2s ease-in-out;
+
+    }
+
     .divider {
         border: 1px solid var(--font);
         margin-block: 1rem 2rem;
@@ -37,7 +45,7 @@
    
     .book-overlay {
         display: none;
-        background-color: hsl(0, 0%, 19%);
+        background-color: var(--card);
         position: fixed;
         top: 50%;
         left: 50%;
@@ -45,8 +53,8 @@
         width: 90%;
         padding: 2rem 1.5rem;
         z-index: 1;
-        -webkit-box-shadow: 5px 5px 11px 5px rgba(23,23,23,0.83); 
-        box-shadow: 5px 5px 11px 5px rgba(23,23,23,0.83);
+        -webkit-box-shadow: 5px 5px 11px 5px var(--shadow); 
+        box-shadow: 5px 5px 11px 5px var(--shadow);
     
         .close {
             position: absolute;
@@ -58,17 +66,21 @@
         .overlay-info {
            margin-block: 1rem;
         }
-
-        
     }
   
-
     .card {
         display: flex;
         gap: 1rem;
         padding: 1.5rem;
         border: 1px solid var(--font);
         margin-bottom: 1.5rem;
+    }
+
+    .card:hover {
+        -webkit-box-shadow: 5px 5px 11px 5px var(--shadow); 
+        box-shadow: 5px 5px 11px 5px var(--shadow);
+        transition: 0.2s ease-in-out;
+        
     }
 
     .book-cover > img {
@@ -78,8 +90,8 @@
 
     .book-info {
 
-        h4 {
-            font-weight: 700;
+        h3 {
+            font-weight: 600;
             font-size: 1.125rem;
         }
       
