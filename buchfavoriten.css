@@ -58,10 +58,14 @@
     
         .close {
             position: absolute;
-            width: 1.5rem;
+            height: 35px;
             right: 2rem;
-           top: 2rem;
+            top: 2rem;
             z-index: 2;
+            background-color: transparent;
+            border-radius: 5px;
+            border: none;
+            width:fit-content;
         }
         .overlay-info {
            margin-block: 1rem;

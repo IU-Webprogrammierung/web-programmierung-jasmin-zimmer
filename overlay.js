@@ -2,30 +2,30 @@ document.addEventListener("DOMContentLoaded", () => {
   const buchcontainer = document.getElementById("buchcontainer");
   const buecher = document.querySelectorAll(".card");
   const overlay = document.querySelector(".book-overlay");
-  let bookdetail;
+  const closeButton = document.querySelector(".close-detail");
+  let bookdetails;
+  let currentBookIndex;
 
   if (buchcontainer) {
     //angeklicktes Element finden
     buecher.forEach((buch) => {
       //Button für den EventListener finden
-      let detail = buch.children.item(1);
-      let button;
-      if (detail.children.item(3) != null) {
-        button = detail.children.item(3);
+      let aktuellesBuch = buch.children.item(1);
+      let detailbutton;
+      if (aktuellesBuch.children.item(3) != null) {
+        detailbutton = aktuellesBuch.children.item(3);
       } else {
-        button = detail.children.item(2);
+        detailbutton = aktuellesBuch.children.item(2);
       }
 
       //overlay öffnen
-      button.addEventListener("click", () => {
-        addbookDetails(buch);
-        showOverlay();
-        console.log(buch);
-      });
-      //Tastaturbedienung
-      button.addEventListener("keypress", (event) => {
-        if (event.key === "Enter") {
-          overlayToggle();
+      detailbutton.addEventListener("click", () => {
+        if (overlay.classList.contains("hidden")) {
+          addbookDetails(buch);
+          showOverlay();
+
+          currentBookIndex = Array.from(buecher).indexOf(buch);
+          console.log(currentBookIndex);
         }
       });
     });
@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
     image = buch.querySelector(".book-image").getAttribute("src");
     imageAlt = buch.querySelector(".book-image").getAttribute("alt");
 
-    bookdetail = `<figure class="book-cover">
+    bookdetails = `<figure class="book-cover">
         <img src="${image}"  alt="${imageAlt}"
             class="book-image" />
         </figure>
@@ -67,31 +67,39 @@ document.addEventListener("DOMContentLoaded", () => {
   //zeigt Overlay
   function showOverlay() {
     overlay.style.display = "grid";
+    overlay.classList.remove("hidden");
+    closeButton.focus();
     buchcontainer.style.filter = "blur(3px)";
-    overlay.insertAdjacentHTML("beforeend", bookdetail);
+    overlay.insertAdjacentHTML("beforeend", bookdetails);
   }
 
   //Event Listener fürs Schließen
-  const closeButton = document.querySelector(".close-detail");
   closeButton.addEventListener("click", () => {
     hideOverlay();
     console.log("clicked");
   });
-  closeButton.addEventListener("keypress", (event) => {
-    if (event.key === "Enter") {
-      hideOverlay();
-    }
-  });
 
   //schließt Overlay & entfernt Inhalte
   function hideOverlay() {
-    const overlay = document.querySelector(".book-overlay");
     const buchcontainer = document.getElementById("buchcontainer");
 
     while (overlay.children.length > 1) {
       overlay.removeChild(overlay.lastChild);
     }
     overlay.style.display = "none";
+    overlay.classList.add("hidden");
     buchcontainer.style.filter = "";
+
+    //nach schließen beim passenden Buch weiter fokussieren
+    let artikel = buecher.item(currentBookIndex);
+    let buchinfo = artikel.children.item(1);
+
+    if (buchinfo.children.item(4) != null) {
+      button = buchinfo.children.item(3);
+    } else {
+      button = buchinfo.children.item(2);
+    }
+
+    button.focus();
   }
 });

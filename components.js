@@ -20,9 +20,15 @@ $(document).ready(function () {
         break;
     }
 
-    $("#hamburger-menu").on("click", function () {
+    $("#hamburger-menu").on("click", () => {
       $(".nav").toggleClass("active");
       console.log("Hamburger-Menü geklickt!");
+    });
+
+    //Tasturgesteuerter Themewechsel für Unterseiten
+    $("#theme-switcher").on("change", () => {
+      toggleSwitch();
+      console.log("switch");
     });
   });
 });
@@ -36,6 +42,8 @@ if (mobileMenu) {
     nav.classList.toggle("active");
   });
 }
+
+//behält Nutzer im Overlay bis zum Schließen
 
 let slides = document.querySelectorAll(".slide");
 let index = 1;
@@ -166,5 +174,14 @@ function loadTheme() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+  //Tasturgesteuerter Themewechsel für Homepage
+  const inputToggle = document.querySelector(".toggle-checkbox ");
+
+  if (inputToggle) {
+    inputToggle.addEventListener("change", () => {
+      toggleSwitch();
+    });
+  }
+
   loadTheme();
 });
