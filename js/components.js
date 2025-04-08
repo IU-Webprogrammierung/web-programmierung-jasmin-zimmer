@@ -10,8 +10,6 @@ $(document).ready(function () {
 
 $(document).ready(function () {
   let aktuelleSeite = window.location.pathname.split("/").pop();
-  const header = document.querySelector("header");
-  console.log(header);
   
   $("#big-header").load("./components/big-header.html", function() {
     switch (aktuelleSeite) {
