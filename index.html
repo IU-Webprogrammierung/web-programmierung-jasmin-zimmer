@@ -4,80 +4,24 @@
     <!--"/" wird durch Extension "Prettier" automatisch hinzugefügt-->
     <meta charset="UTF-8" >
     <meta name="viewport" content="width=device-width, intiale-scale=1.0" >
-   
-    
-    <link rel="stylesheet" href="global.css" />
-    <link rel="stylesheet" href="home.css" />
-
+    <link rel="stylesheet" href="./global.css" />
+    <link rel="stylesheet" href="./home.css" />
+    <link rel="stylesheet" href="./big-header.css" />
     <title>Startseite</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script defer src="./components.js"></script>
   </head>
 
   <body>
-    <header>
-      <nav class="nav">
-        <div class="logo">
-          <img
-            alt="Logo. Zeigt den Schriftzug 'smin.' in simpler Schrift zeigt"
-            src="./images/logo-darkm.png"
-          />
-        </div>
-
-        <div class="desktop-hidden hamburger hamburger-menu">
-          <button class="hamburger hamburger-menu" id="hamburger-menu">
-            <span></span>
-            <span></span>
-            <span></span>
-          </button>
-        </div>
-        <ul class="nav-links">
-          <li><a href="./index.html">Startseite</a></li>
-          <li><a href="./ueber-mich.html">Über mich</a></li>
-          <li><a href="./werdegang.html">Werdegang</a></li>
-          <li><a href="./buchfavoriten.html">Buchfavoriten</a></li>
-        </ul>
-        <!--Toggle Button (Light & Dark Theme)-->
-        <label class="switch" for="theme-toggle">
-          <input
-            id="theme-toggle"
-            class="toggle-checkbox"
-            id="theme-switcher"
-            type="checkbox"
-          />
-          <span class="slider"></span>
-        </label>
-      </nav>
-
-      <div class="text-wrapper">
-        <h1 class="serif">Hey,</h1>
-        <div class="detail-text">
-          <h2 class="sansserif">ich bin Jasmin</h2>
-          <p>
-            eine begeisterte Studentin mit einer Leidenschaft für
-            Programmierung. Ich liebe es, kreative Lösungen zu entwickeln und
-            neue Technologien zu erkunden
-          </p>
-        </div>
-      </div>
-
-      <button
-        aria-label="Hier geht es zu weiteren Inhalten auf der Seite"
-        class="scrollButton"
-      >
-        <img
-          src="./images/arrow-down-darkm.png"
-          alt="Icon von einem nach untengerichteten Pfeil"
-        />
-      </button>
+    <header id="big-header">
     </header>
 
     <main>
       <section class="vorstellung" aria-label="kurze Vorstellung von Jasmin">
-        <div class="img-container">
+        <div class="vorstellung_img">
           <img src="./images/me.jpg" alt="Bild von Jasmin, lächelend" />
         </div>
-        <div class="text">
+        <div class="vorstellung_text">
           <h2>Überblick: <i>Das bin ich</i></h2>
           <p>
             Als Studentin im 5. Semester der Informatik begeistert mich das
@@ -91,12 +35,12 @@
         </div>
       </section>
 
-      <section class="kennen-lernen" aria-label="Auswahl zum Kennenlernen">
-        <h2>
+      <section class="kennenlernen" aria-label="Auswahl zum Kennenlernen">
+        <h2  class="kennenlernen_heading">
           Möchtest du mich persönlich <i>oder professionell</i> kennenlernen
         </h2>
         <div class="personal">
-          <div class="overlay img-container">
+          <div class="overlay kennenlernen_img">
             <!--dekorative Bild, keine relevante Information-->
             <img src="./images/personal-darkm.jpg" alt="" />
           </div>
@@ -104,18 +48,20 @@
           <a
             href="./über-mich.html"
             aria-label="Hier geht es zur Über-mich-Seite"
+            class="kennenlernen_link"
           >
             <h3>Persönlich</h3>
           </a>
         </div>
         <div class="professionell">
-          <div class="overlay img-container">
+          <div class="overlay kennenlernen_img">
             <!--dekorative Bild, keine relevante Information-->
             <img src="./images/professional-darkm.jpg" alt="" />
           </div>
           <a
             href="./werdegang.html"
             aria-label="Hier geht es zu meinem Werdegang"
+            class="kennenlernen_link"
           >
             <h3>Professionell</h3>
           </a>
@@ -127,10 +73,10 @@
       </section>
 
       <section class="contact grid" aria-label="Kontaktformular">
-        <div class="contact-text">
-          <h2>Kontakt</h2>
-          <ul>
-            <li>
+        <address class="contact_text">
+          <h2 class="contact_heading">Kontakt</h2>
+          <ul class="contact_list">
+            <li class="contact_listitem">
               <img
                 src="./images/icon-email-darkm.png"
                 alt="Meine E-mailadresse"
@@ -138,7 +84,7 @@
               />
               <p>zimmer.jasmin04@gmail.com</p>
             </li>
-            <li>
+            <li class="contact_listitem">
               <img
                 src="./images/icon-phone-darkm.png"
                 alt="Meine Telefonnummer"
@@ -146,7 +92,7 @@
               />
               <p>+49 174 9889437</p>
             </li>
-            <li>
+            <li class="contact_listitem">
               <img
                 src="./images/icon-github-darkm.png"
                 alt="Mein Github-Konto"
@@ -155,10 +101,10 @@
               <a href="https://github.com/zrjasmin">zrjasmin</a>
             </li>
           </ul>
-        </div>
+        </address>
         <div>
           <!--dekorative Bild, keine relevante Information-->
-          <img class="img" src="./images/contact-darkm.jpg" alt="" />
+          <img class="contact_img" src="./images/contact-darkm.jpg" alt="" />
         </div>
       </section>
     </main>

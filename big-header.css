@@ -1,0 +1,72 @@
+h1 {
+    font-size: clamp(7.25rem, 5.2254rem + 8.6385vw, 13rem);
+}
+
+
+/*angepasster Header für Startseite*/
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/images/hero-darkm.jpg") center center;
+    background-size: cover;
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 20px;
+
+    .header_heading {
+        padding: 0;
+        text-align: left;
+    }
+}
+
+.text-wrapper {
+    margin-inline: 1rem;
+}
+
+.detail-text>p,
+.detail-text>h2 {
+    color: var(--hero-text);
+    margin-bottom: 1rem;
+}
+
+
+
+
+@media screen and (min-width: 640px) {
+    header {
+        height: 28.125rem;
+    }
+
+    .text-wrapper {
+        display: flex;
+        width: 90%;
+        max-width: 950px;
+        margin-bottom: 2rem;
+        align-self: center;
+    }
+
+    .detail-text {
+        padding: 4rem 0rem 0rem 1rem;
+    }
+
+    .detail-text>h2 {
+        margin-bottom: 0.75rem;
+    }
+}
+
+
+
+
+@media screen and (min-width: 768px) {
+    header {
+        padding: 2rem;
+        height: 31.25rem;
+    }
+
+    header>button {
+        margin-bottom: 1rem;
+    }
+
+
+}

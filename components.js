@@ -3,61 +3,76 @@ $(document).ready(function () {
     //wechselt zu passenden Icon (abhängig von Theme)
     let footerIcon = document.querySelectorAll(".footer_icon");
     const currentTheme = localStorage.getItem("theme");
-   
+    
     replaceImage(footerIcon, currentTheme);
   });
 });
 
 $(document).ready(function () {
-  $("#header").load("./components/header.html", function () {
-    let aktuelleSeite = window.location.pathname.split("/").pop();
+  let aktuelleSeite = window.location.pathname.split("/").pop();
+  const header = document.querySelector("header");
+  console.log(header);
+  
+  $("#big-header").load("./components/big-header.html", function() {
+    switch (aktuelleSeite) {
+      case "index.html":
+        $(".header_heading").text("Hey,");
+        $(".header_h2").text("ich bin Jasmin");
+        $(".header_text").text("eine begeisterte Studentin mit einer Leidenschaft für Programmierung. Ich liebe es, kreative Lösungen zu entwickeln und neue Technologien zu erkunden");
+        break;
+      case "error.html":
+        $(".header_heading").text("404");
+        $(".header_h2").text("Fehler: Seite nicht gefunden");
+        $(".header_text").text("Oh nein! Die von dir gesuchte Seite konnte nicht gefunden werden. Möglicherweise wurde sie entfernt, umbenannt oder ist vorübergehend nicht verfügbar.");
+        break;
+  }
 
+  manageJQueryElements();
+});
+
+  $("#small-header").load("./components/small-header.html", function () {
     //lädt unterschiedliche Texte auf den Unterseiten
     switch (aktuelleSeite) {
       case "werdegang.html":
-        $(".header-heading").text("Mein Werdegang");
+        $(".header_heading").text("Mein Werdegang");
         break;
       case "buchfavoriten.html":
-        $(".header-heading").text("Meine Buchfavoriten");
+        $(".header_heading").text("Meine Buchfavoriten");
         break;
       case "ueber-mich.html":
-        $(".header-heading").text("Über mich");
+        $(".header_heading").text("Über mich");
+        break;
+      case "error.html":
+        $(".header_heading").text("Seite nicht gefunden");
         break;
     }
 
-    $("#hamburger-menu").on("click", () => {
-      $(".nav").toggleClass("active");
-      console.log("Hamburger-Menü geklickt!");
-    });
-
-    //Tasturgesteuerter Themewechsel für Unterseiten
-    $("#theme-switcher").on("change", () => {
-      toggleSwitch();
-      console.log("switch");
-    });
-
-    $(".scrollButton").on("click", () => {
-      window.scrollTo({
-        top: 300,
-        behavior: "smooth",
-      });
-    });
-
-    
+    manageJQueryElements();
   });
 });
 
-//Mobiles Menu
-const mobileMenu = document.getElementById("hamburger-menu");
-const nav = document.querySelector("nav");
 
-if (mobileMenu) {
-  mobileMenu.addEventListener("click", () => {
-    nav.classList.toggle("active");
-  });
+
+function manageJQueryElements() {
+  $("#hamburger-menu").on("click", () => {
+    $(".nav").toggleClass("active");
+    
+  });    
+
+  $("#theme-switcher").on("change", () => {
+    toggleSwitch();
+   
+});
+
+$(".scrollButton").on("click", () => {
+    window.scrollTo({
+    top: 300,
+    behavior: "smooth",
+    });
+});
 }
 
-//behält Nutzer im Overlay bis zum Schließen
+
 
 let slides = document.querySelectorAll(".slide");
 let index = 1;
@@ -94,7 +109,7 @@ function navigate(n) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  const sliderContainer = document.querySelector(".slideshow-container");
+  const sliderContainer = document.querySelector(".slideshow_container");
 
   if (sliderContainer) {
     function checkWindowSize() {
@@ -138,82 +153,64 @@ function filterBooks(category) {
   });
 }
 
+
 function toggleSwitch() {
   const currentTheme = localStorage.getItem("theme");
   if (currentTheme === "dark") {
-    setTheme("light");
+      setTheme("light");
   } else if (currentTheme === "light") {
-    setTheme("dark");
+      setTheme("dark");
   }
-}
-
-//Seitenübergreifer Themewechsel
+  }
+  
+  //Seitenübergreifer Themewechsel
 function setTheme(theme) {
-
   document.documentElement.setAttribute("data-theme", theme);
   localStorage.setItem("theme", theme);
 
   if (theme === "dark") {
-    //header styles
-    document.documentElement.setAttribute("data-theme", "dark");
-    document.body.style.backgroundImage = "url(./images/dark-bg.png)";
-    document.querySelector("header").style.background =
+      //header styles
+      document.documentElement.setAttribute("data-theme", "dark");
+      document.body.style.backgroundImage = "url(./images/dark-bg.png)";
+      document.querySelector("header").style.background =
       'linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("/images/hero-darkm.jpg") center center';
-      
-    } else if (theme === "light") {
-    document.documentElement.setAttribute("data-theme", "light");
-    document.body.style.backgroundImage = "url(./images/light-bg.png)";
-    document.querySelector("header").style.background =
+
+      } else if (theme === "light") {
+      document.documentElement.setAttribute("data-theme", "light");
+      document.body.style.backgroundImage = "url(./images/light-bg.png)";
+      document.querySelector("header").style.background =
       'linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("/images/hero-lightm.jpg") center center';
   }
-
+  
   const images = document.querySelectorAll("img");
   replaceImage(images, theme);
   //Bildvariante laden
   
 }
-
+  
 function replaceImage(images, theme){
   images.forEach((img) => {
     let url = img.src;
     let newUrl;
 
     if (theme === "light") {
-      newUrl = url.replace("darkm", "lightm");
+    newUrl = url.replace("darkm", "lightm");
     } else {
-      newUrl = url.replace("lightm", "darkm");
+    newUrl = url.replace("lightm", "darkm");
     }
 
     img.src = newUrl;
   });
 }
-
+  
 function loadTheme() {
   let savedTheme = localStorage.getItem("theme") || "dark";
-
   setTheme(savedTheme);
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-  //Tasturgesteuerter Themewechsel für Homepage
-  const inputToggle = document.querySelector(".toggle-checkbox ");
-
-  if (inputToggle) {
-    inputToggle.addEventListener("change", () => {
-      toggleSwitch();
-    });
-  }
-
-  loadTheme();
+document.addEventListener("DOMContentLoaded", () => {  
+  loadTheme();  
 });
 
-//Scroll Button im Header
-const scrollButton = document.querySelector(".scrollButton");
-if (scrollButton) {
-  scrollButton.addEventListener("click", () => {
-    window.scrollTo({
-      top: 500,
-      behavior: "smooth",
-    });
-  });
-}
+
+

@@ -1,5 +1,5 @@
 <nav class="nav">
-  <div class="logo">
+  <div class="nav_logo">
     <img
       src="./images/logo-darkm.png"
       alt="Logo. Zeigt den Schriftzug 'smin.' in simpler Schrift zeigt"
@@ -14,21 +14,24 @@
     </button>
   </div>
 
-  <ul class="nav-links">
-    <li><a href="./index.html">Startseite</a></li>
-    <li><a href="./ueber-mich.html">Über mich</a></li>
-    <li><a href="./werdegang.html">Werdegang</a></li>
-    <li><a href="./buchfavoriten.html">Buchfavoriten</a></li>
+  <ul class="nav_links">
+    <li><a href="./index.html" class="nav_link">Startseite</a></li>
+    <li><a href="./ueber-mich.html" class="nav_link">Über mich</a></li>
+    <li><a href="./werdegang.html" class="nav_link">Werdegang</a></li>
+    <li><a href="./buchfavoriten.html" class="nav_link">Buchfavoriten</a></li>
   </ul>
 
   <label class="switch" for="theme-switcher">
-    <input class="toggle-checkbox" type="checkbox" id="theme-switcher" />
-
+    <input 
+      id="theme-switcher"
+      class="toggle-checkbox" 
+      type="checkbox" 
+    />
     <span class="slider"></span>
   </label>
 </nav>
 
-<h1 class="serif header-heading"></h1>
+<h1 class="header_heading"></h1>
 <button
   aria-label="Hier geht es zu weiteren Inhalten auf der Seite"
   class="scrollButton"
