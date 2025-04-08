@@ -261,8 +261,8 @@ nav {
     display: grid;
     grid-template-columns: 1fr 1fr;
     position: absolute;
-    right: 0;
-    top: 0;
+    right: -1rem;
+    top: -1rem;
     padding: 2rem 2rem 2rem 2.2rem;
     background-color: var(--card);
     border-radius: 20px;
@@ -395,6 +395,7 @@ nav {
 
 header {
     display: flex;
+    position: relative;
     flex-direction: column;
     justify-content: space-between;
     background-size: cover;
