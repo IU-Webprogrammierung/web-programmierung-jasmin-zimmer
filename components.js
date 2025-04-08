@@ -1,23 +1,18 @@
 $(document).ready(function () {
   $("#footer").load("./components/footer.html", function() {
+    //wechselt zu passenden Icon (abhängig von Theme)
     let footerIcon = document.querySelectorAll(".footer_icon");
-    console.log(footerIcon)
-
     const currentTheme = localStorage.getItem("theme");
-    console.log(currentTheme);
+   
     replaceImage(footerIcon, currentTheme);
-
   });
-
-
 });
 
 $(document).ready(function () {
   $("#header").load("./components/header.html", function () {
     let aktuelleSeite = window.location.pathname.split("/").pop();
 
-    console.log(aktuelleSeite);
-
+    //lädt unterschiedliche Texte auf den Unterseiten
     switch (aktuelleSeite) {
       case "werdegang.html":
         $(".header-heading").text("Mein Werdegang");

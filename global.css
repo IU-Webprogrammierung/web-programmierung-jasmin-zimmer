@@ -139,14 +139,11 @@ h4 {
 .h2-serif {
     font-size: clamp(2.25rem, 1.9419rem + 1.3146vw, 3.125rem);
     font-family: "Playfair Display", serif;
-
     font-style: italic;
 }
 
 section {
     margin-inline: 1rem;
-
-
 }
 
 .icon {
@@ -166,11 +163,6 @@ figure {
     margin: 0;
 }
 
-
-
-
-
-
 @media screen and (min-width: 1024px) {
     section {
         width: 90%;
@@ -181,7 +173,6 @@ figure {
 
 
 /*Navigations Styles*/
-
 .nav-links {
     display: none;
     margin: 0;
@@ -359,7 +350,6 @@ input:checked+.slider:before {
     background: var(--hero-text);
     border-radius: 9px;
     opacity: 1;
-
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
     -o-transform: rotate(0deg);
@@ -483,8 +473,6 @@ header>button>img {
             margin-bottom: 0.75rem;
         }
     }
-
-
 }
 
 @media screen and (min-width: 768px) {
@@ -513,7 +501,6 @@ footer {
     ul {
         padding-left: 0;
         margin: 0;
-
     }
 
     li {
@@ -527,18 +514,15 @@ footer {
     }
 
     .contact-li {
-
         display: flex;
 
         img {
             margin-right: 1rem;
         }
-
     }
 
     .contact-li:nth-child(6) {
         margin-top: 2rem;
-
     }
 }
 
@@ -550,8 +534,6 @@ footer {
 
 @media screen and (min-width: 768px) {
     footer {
-
-
         ul {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -561,6 +543,4 @@ footer {
         }
 
     }
-
-
 }
