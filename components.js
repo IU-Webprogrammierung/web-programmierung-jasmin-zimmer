@@ -30,6 +30,13 @@ $(document).ready(function () {
       toggleSwitch();
       console.log("switch");
     });
+
+    $(".scrollButton").on("click", () => {
+      window.scrollTo({
+        top: 300,
+        behavior: "smooth",
+      });
+    });
   });
 });
 
@@ -185,3 +192,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
   loadTheme();
 });
+
+//Scroll Button im Header
+const scrollButton = document.querySelector(".scrollButton");
+if (scrollButton) {
+  scrollButton.addEventListener("click", () => {
+    window.scrollTo({
+      top: 500,
+      behavior: "smooth",
+    });
+  });
+}
