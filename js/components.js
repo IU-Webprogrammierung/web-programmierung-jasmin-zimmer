@@ -91,13 +91,13 @@ function setTheme(theme) {
       document.documentElement.setAttribute("data-theme", "dark");
       document.body.style.backgroundImage = "url(./images/dark-bg.png)";
       document.querySelector("header").style.background =
-      'linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("/images/hero-darkm.jpg") center center';
+      'linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("./images/hero-darkm.jpg") center center';
 
       } else if (theme === "light") {
       document.documentElement.setAttribute("data-theme", "light");
       document.body.style.backgroundImage = "url(./images/light-bg.png)";
       document.querySelector("header").style.background =
-      'linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("/images/hero-lightm.jpg") center center';
+      'linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("./images/hero-lightm.jpg") center center';
   }
   
   const images = document.querySelectorAll("img");
