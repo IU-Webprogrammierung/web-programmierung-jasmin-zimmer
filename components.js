@@ -1,5 +1,15 @@
 $(document).ready(function () {
-  $("#footer").load("./components/footer.html");
+  $("#footer").load("./components/footer.html", function() {
+    let footerIcon = document.querySelectorAll(".footer_icon");
+    console.log(footerIcon)
+
+    const currentTheme = localStorage.getItem("theme");
+    console.log(currentTheme);
+    replaceImage(footerIcon, currentTheme);
+
+  });
+
+
 });
 
 $(document).ready(function () {
@@ -37,6 +47,8 @@ $(document).ready(function () {
         behavior: "smooth",
       });
     });
+
+    
   });
 });
 
@@ -142,15 +154,18 @@ function toggleSwitch() {
 
 //Seitenübergreifer Themewechsel
 function setTheme(theme) {
+
   document.documentElement.setAttribute("data-theme", theme);
   localStorage.setItem("theme", theme);
 
   if (theme === "dark") {
+    //header styles
     document.documentElement.setAttribute("data-theme", "dark");
     document.body.style.backgroundImage = "url(./images/dark-bg.png)";
     document.querySelector("header").style.background =
       'linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("/images/hero-darkm.jpg") center center';
-  } else if (theme === "light") {
+      
+    } else if (theme === "light") {
     document.documentElement.setAttribute("data-theme", "light");
     document.body.style.backgroundImage = "url(./images/light-bg.png)";
     document.querySelector("header").style.background =
@@ -158,8 +173,12 @@ function setTheme(theme) {
   }
 
   const images = document.querySelectorAll("img");
-
+  replaceImage(images, theme);
   //Bildvariante laden
+  
+}
+
+function replaceImage(images, theme){
   images.forEach((img) => {
     let url = img.src;
     let newUrl;
