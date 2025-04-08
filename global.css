@@ -261,14 +261,15 @@ nav {
     display: grid;
     grid-template-columns: 1fr 1fr;
     position: absolute;
-    right: -1rem;
-    top: -1rem;
+    right: 0;
+    top: 0;
+    padding: 2rem 2rem 2rem 2.2rem;
     background-color: var(--card);
     border-radius: 20px;
-    width: 100%;
+    width: 90%;
     height: 41.25rem;
     z-index: 2;
-    padding: 2rem;
+
 
     .nav_links {
         display: block;
